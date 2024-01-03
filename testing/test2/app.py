@@ -21,6 +21,16 @@ def contact():
     """view the contact page"""
     return render_template("contact.html")
 
+#add the code for the button click 
+@app.route('/contact', methods=['POST'])
+def button_click():
+    # Code to execute when the button is clicked
+    # You can add your custom logic here
+    # For example, update a database, perform calculations, etc.
+    return render_template("contact.html")
+
+
+
 
 if __name__ == '__main__':  
    app.run()
