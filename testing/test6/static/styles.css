@@ -1,0 +1,10 @@
+
+/* styles.css */
+.height-full {
+  /* CSS properties and values */
+  height: 100vh;
+}
+
+.height-half {
+  height: 60vh;
+}
