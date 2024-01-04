@@ -16,6 +16,11 @@ def home():
 def test():
     return render_template('test.html')
 
+@app.route('/new')
+def new():
+    return render_template('new.html')
+
+
 """
 @app.route('/about')
 def about():
