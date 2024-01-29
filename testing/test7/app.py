@@ -6,7 +6,11 @@ dummy code
 
 from flask import Flask, render_template
 
+
 app = Flask(__name__)
+
+
+app.config['STATIC_FOLDER'] = 'static'
 
 @app.route('/')
 def home():
