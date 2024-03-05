@@ -16,17 +16,19 @@ app.config['STATIC_FOLDER'] = 'static'
 def home():
     return render_template('new.html')
 
-"""
-@app.route('/test')
+
+@app.route('/nav_bar')
 def test():
-    return render_template('test.html')
-
-@app.route('/new')
-def new():
-    return render_template('new.html')
+    return render_template('nav_bar.html')
 
 
 
+@app.route('/body')
+def body():
+    return render_template('body.html')
+
+
+"""
 @app.route('/about')
 def about():
     return render_template('about.html')
