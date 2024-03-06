@@ -28,11 +28,12 @@ def body():
     return render_template('body.html')
 
 
-"""
-@app.route('/about')
-def about():
-    return render_template('about.html')
 
+@app.route('/full')
+def about():
+    return render_template('full-body.html')
+
+"""
 @app.route('/contact')
 def contact():
     return render_template('contact.html')

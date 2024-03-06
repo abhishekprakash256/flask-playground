@@ -19,3 +19,11 @@
 .arial-font {
   font-family: Arial, sans-serif;
 }
+
+
+
+.footer-pos {
+  position: absolute;
+  bottom: 0;
+  width: 100%          /* Footer height */
+}
