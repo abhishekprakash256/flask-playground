@@ -8,3 +8,14 @@
 .height-half {
   height: 60vh;
 }
+
+/* Custom CSS */
+.custom-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Custom CSS */
+.arial-font {
+  font-family: Arial, sans-serif;
+}
