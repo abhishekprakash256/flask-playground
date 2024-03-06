@@ -33,12 +33,14 @@ def body():
 def about():
     return render_template('full-body.html')
 
-"""
-@app.route('/contact')
+@app.route('/blog')
 def contact():
-    return render_template('contact.html')
-"""
+    return render_template('blog_page.html')
 
+
+@app.route('/card')
+def card():
+    return render_template('card_page.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
