@@ -17,25 +17,9 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/navbar')
-def test():
-    return render_template('navbar.html')
-
-
-
-@app.route('/body')
-def body():
-    return render_template('body.html')
-
-
-
-@app.route('/footer')
-def about():
-    return render_template('footer.html')
-
-@app.route('/blog')
+@app.route('/article')
 def contact():
-    return render_template('blog.html')
+    return render_template('article-page.html')
 
 
 @app.route('/showcase')
