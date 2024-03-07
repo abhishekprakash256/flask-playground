@@ -1,0 +1,29 @@
+
+/* styles.css */
+.height-full {
+  /* CSS properties and values */
+  height: 100vh;
+}
+
+.height-half {
+  height: 60vh;
+}
+
+/* Custom CSS */
+.custom-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Custom CSS */
+.arial-font {
+  font-family: Arial, sans-serif;
+}
+
+
+
+.footer-pos {
+  position: absolute;
+  bottom: 0;
+  width: 100%          /* Footer height */
+}
