@@ -1,9 +1,3 @@
-<div class = "row p-3" >
-    
-    <div class="col text-center background-color-body">
-      <h1 class = "custom-font display-2" style="font-size: 3vw;">{{ title }}</h1>
-    </div>
-  </div>
   <!--- the heding continer row -->
 
 
@@ -14,7 +8,7 @@
 
       <!--- start the card -->
       <div class="card" style="width: 100%">
-        <img src="../static/cards.jpg" class="img-fluid card-img-top" alt="...">
+        <img src="{{ image_url_card_one }}" class="img-fluid card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text font-color-class"><a href="" class="font-color-class text-decoration-none">{{ card_one_text }}</a></p>
         </div>
@@ -28,7 +22,7 @@
 
       <!--- start the card -->
       <div class="card" style="width: 100%">
-        <img src="../static/cards.jpg" class="img-fluid card-img-top" alt="...">
+        <img src="{{ image_url_card_two }}" class="img-fluid card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text font-color-class"><a href="" class="font-color-class text-decoration-none">{{ card_two_text }}</a></p>
         </div>
@@ -41,7 +35,7 @@
 
               <!--- start the card -->
               <div class="card" style="width: 100%">
-                <img src="../static/cards.jpg" class="img-fluid card-img-top" alt="...">
+                <img src="{{ image_url_card_three }}" class="img-fluid card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text font-color-class"><a href="" class="font-color-class text-decoration-none">{{ card_three_text }}</a></p>
                 </div>
@@ -54,10 +48,3 @@
 
   </div>
 
-      <!------------------the more box ----------------->
-      <div class = "row" >
-        <div class ="col text-center">
-          <h1 ><a class="text-decoration-none text-dark" href="#">...</a></h1>
-    
-      </div>
-      </div>
