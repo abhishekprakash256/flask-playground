@@ -27,3 +27,18 @@
   bottom: 0;
   width: 100%          /* Footer height */
 }
+
+
+.background-color-body {
+  background-color: #F6F1F1; /* Replace #ff0000 with the color of your choice */
+}
+
+
+.main-container-color {
+  background-color: #19A7CE;
+}
+
+.font-color-class {
+  color: #146C94; /* Replace #0000ff with the color of your choice */
+}
+
