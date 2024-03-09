@@ -1,0 +1,4 @@
+.heading-responsive-font {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  
