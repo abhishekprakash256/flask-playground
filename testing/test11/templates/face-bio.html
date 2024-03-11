@@ -8,7 +8,7 @@
     
         <div class="col">
 
-          <img src="../static/profile-pic.jpg" class="img-fluid rounded-circle mt-2 mb-2 shadow" alt="...">
+          <img src="../static/profile-pic.jpg" class="img-fluid rounded-circle mt-3 mb-3 shadow" alt="...">
           <!--- the image fuid makes the image small, the rounded - circle makes the images rounded -->
     
         </div>
@@ -19,11 +19,13 @@
           <div class = "row" >
     
             <div class ="col text-center p-3">
-            <h1 class="heading-responsive-font"> {{ welcome_text }}</h1>
+            <h1 class="heading-responsive-font bio-font"> {{ welcome_text }}</h1>
             </div>
           </div>
     
-          <h1 class="arial-font bio-responisve-font mb-5 font-color-class" >{{ bio_text }}</h1>
+          <h1 class="bio-responisve-font mb-2 mt-0 bio-desc font-color-class" >{{ bio_text }}</h1>
+          
+          {% include 'more.html' %}
         </div>
     
         <!------------------the border is for the color -------------------->
