@@ -1,0 +1,79 @@
+
+<body class="background-color-body">
+    <div class="container main-container-color shadow-lg">
+      <!-- the container is the start of the container  that has boxes inside it -->
+    
+    
+    
+     
+    {% set title = "About Me" %}
+    {% include 'card-heading.html' %}
+  
+    <!---------------------the image passed -------------->
+    {% set image_src = "../static/profile-pic.jpg" %}
+    {% include 'about-pic.html' %}
+    
+   
+    <!---------------the article ------------>
+    {% set article_para = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+     when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+      publishing software like Aldus PageMaker including versions of Lorem Ipsum." %}
+    
+    {% include 'article-desc.html' %}
+
+    {% set article_para = "Proin lobortis nunc sed sollicitudin ullamcorper. 
+    Praesent id tellus massa. Nullam sit amet sapien in nulla pellentesque eleifend. 
+    Sed accumsan a massa semper facilisis. Nullam lacinia tellus quis libero ullamcorper, 
+    eget placerat metus feugiat. Fusce semper, elit accumsan dapibus sollicitudin, 
+    erat sapien accumsan justo, vel tempor purus sapien ac purus. Ut imperdiet ornare laoreet. 
+    Donec vulputate ante diam, et accumsan massa ultricies feugiat. Phasellus ligula tellus, 
+    efficitur ut sodales et, viverra eu risus. Nunc suscipit vel nunc sed imperdiet.
+     Vivamus vel dui tempus, condimentum augue eu, egestas ligula. 
+     Praesent tincidunt eleifend eros, feugiat fringilla massa volutpat nec.
+      Praesent sed felis urna. Nam libero nibh, 
+      tempus eu consectetur eget, pellentesque vitae orci. Maecenas sed tristique tellus. Cras viverra eget felis ut molestie. " %}
+    
+    {% include 'article-desc.html' %}
+  
+    {% set title = "This is heading" %}
+    {% include 'card-heading.html' %}
+
+    {% set article_para_one = "Proin lobortis nunc sed sollicitudin ullamcorper. 
+    Praesent id tellus massa. Nullam sit amet sapien in nulla pellentesque eleifend. 
+    Sed accumsan a massa semper facilisis. Nullam lacinia tellus quis libero ullamcorper, 
+    eget placerat metus feugiat. Fusce semper, elit accumsan dapibus sollicitudin, 
+    erat sapien accumsan justo, vel tempor purus sapien ac purus. Ut imperdiet ornare laoreet. 
+    Donec vulputate ante diam, et accumsan massa ultricies feugiat. Phasellus ligula tellus, efficitur ut sodales et, 
+    viverra eu risus. Nunc suscipit vel nunc sed imperdiet. Vivamus vel dui tempus, condimentum augue eu, egestas ligula. 
+    Praesent tincidunt eleifend eros, feugiat fringilla massa volutpat nec. Praesent sed felis urna. 
+    Nam libero nibh, tempus eu consectetur eget, pellentesque vitae orci. Maecenas sed tristique tellus. Cras viverra eget felis ut molestie.  " %} 
+   
+ 
+  {% include 'article-desc.html' %}
+
+  {% set title = "Articles" %}
+  {% include 'card-heading.html' %}
+ 
+  
+    <!--------------set the card structure ------>
+    {% set card_one_text = "Some quick example text to build on the card title and make up the bulk of the card's content" %}
+    <!--------- ------set card text------- ------->
+    {%set image_url_card_one = "../static/cards.jpg" %}
+    
+    {% set card_two_text = "Some quick example text to build on the card title and make up the bulk of the card's content" %}
+    {%set image_url_card_two = "../static/cards.jpg" %}
+    
+    {% set card_three_text = "Some quick example text to build on the card title and make up the bulk of the card's content" %}
+    {%set image_url_card_three = "../static/cards.jpg" %}
+    
+    {% include 'cards-display.html' %}
+    
+    <!--------------------The end of one card  ---------------->
+    {% include 'more.html' %}
+    
+    </div>
+    
+    </body>
