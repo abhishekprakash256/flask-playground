@@ -16,12 +16,9 @@
     {% include 'social-media.html' %}
 
     <!---------------the article ------------>
-    {% set article_para = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-     when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-      It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-      publishing software like Aldus PageMaker including versions of Lorem Ipsum." %}
+    {% set article_para = "With a solid year of industry experience, I have developed expertise in various programming languages, with a strong emphasis on Python. My skill set extends to encompass Machine Learning, automation, and the design of tools for live production systems. I am well-versed in popular machine learning and deep learning frameworks such as PyTorch, TensorFlow, and scikit-learn.
+    In addition to my comprehensive computer science background, which includes a master's degree in computer science, I possess an in-depth understanding of data structures and algorithms. My professional journey has been marked by active involvement in a wide range of software projects, spanning from the development of small-scale tools to the orchestration of large-scale production systems. I take pride in my ability to ensure the robustness and efficiency of solutions, which is supported by my proficiency in unit testing and data visualization.
+    Furthermore, I have augmented my skill set with a specialization in Machine Learning Operations (MLOps). My knowledge in this domain extends to the management of CI/CD pipelines, guaranteeing the seamless integration and deployment of machine learning models. I am also well-versed in the use of automation tools like Ansible and Terraform, which has enabled me to streamline and automate MLOps processes. This optimization enhances the overall efficiency and reliability of machine learning workflows." %}
     
     {% include 'article-desc.html' %}
 
@@ -104,18 +101,6 @@
 {% include 'cards-display.html' %}
 
 <!--------------------The end of one card  ---------------->
-{% include 'more.html' %}
-
-    {% set title = "Soft Skills" %}
-    {% include 'card-heading.html' %}
-
-
-
-    {% set title = "Active Listening | Innovation | Critical Thinking | Bilingual Communication | Collaborative Team Player" %}
-    {% set title_two = "" %}
-    {% set title_three = "" %}
-    {% set title_four = "" %}
-    {% include 'skills-heading.html' %}
 
 
   {% set title = "Articles" %}
@@ -137,6 +122,28 @@
     
     <!--------------------The end of one card  ---------------->
     {% include 'more.html' %}
+
+  
+
+    {% set title = "Life" %}
+    {% include 'card-heading.html' %}
+   
+    
+      <!--------------set the card structure ------>
+      {% set card_one_text = "Some quick example text to build on the card title and make up the bulk of the card's content" %}
+      <!--------- ------set card text------- ------->
+      {%set image_url_card_one = "../static/cards.jpg" %}
+      
+      {% set card_two_text = "Some quick example text to build on the card title and make up the bulk of the card's content" %}
+      {%set image_url_card_two = "../static/cards.jpg" %}
+      
+      {% set card_three_text = "Some quick example text to build on the card title and make up the bulk of the card's content" %}
+      {%set image_url_card_three = "../static/cards.jpg" %}
+      
+      {% include 'cards-display.html' %}
+      
+      <!--------------------The end of one card  ---------------->
+      {% include 'more.html' %}
     
     </div>
     
