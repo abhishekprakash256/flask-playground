@@ -42,8 +42,58 @@
     {% set heading_two = "SDE" %}
     {% set desc_one = "Implemented a Machine Learning product recommendation system, based on the most sold products in recent months.utilizing Popularity-Based Recommendation and Content-Based Filtering algorithms." %}
     {% set desc_two = "Achieved a notable 20% increase in user engagement, a 15% improvement in click-through rates, and a 10% increase in conversion rates" %}
+    {% set desc_three = "Implemented a robust sorting system utilizing plugins to enhance product filtering capabilities on the website" %}
+    {% set desc_four = "Executed comprehensive testing procedures for the website, employing GitLab CI/CD, Selenium, Ansible and Python to validate the efficiency of the filtering process and optimize the customer checkout experience." %}
+    {% include 'experience-list-one.html' %}
+
+
+    {% set heading_one = "Cognitive Geo Interpretation Inc " %}
+    {% set heading_two = "SDE" %}
+    {% set desc_one = "Development, design, and ongoing maintenance of a robust GitLab CI/CD pipeline, enabling seamless infrastructure
+    development for standalone machines on AWS. Employed Ansible for efficient provisioning processes. This pipeline has
+    been instrumental in production, facilitating developer machine deployments.
+    " %}
+    {% set desc_two = "Elevated software quality through comprehensive end-to-end testing initiatives, driving an increase in test coverage from
+    65% to an impressive 75%. Leveraged Pytest, unit testing, and coverage analysis to achieve these results" %}
     
-    {% include 'experience-list.html' %}
+    {% include 'experience-list-two.html' %}
+
+
+    
+
+    {% set heading_one = "Florida State University" %}
+    {% set heading_two = "Research Assistant" %}
+    {% set desc_one = "Achieved a prediction accuracy of around 90% by Implementing Fed-Avg algorithm for Federated learning on MNIST
+    data set with six learning workers using Pytorch.
+    " %}
+    {% set desc_two = "Achieved 30% faster task off-loading by developing Double deep - Q learning model in Pytorch for Reinforcement
+    Learning task, on edge devices.
+    " %}
+    {% set desc_three = "Increase time efficiency by 60 % by developing automation scripts to collect and process data from Zigbee and Wi-Fi
+    devices." %}
+    {% include 'experience-list-three.html' %}
+
+
+    
+{% set title = "Projects" %}
+{% include 'card-heading.html' %}
+
+<!--------------set the card structure ------>
+{% set card_one_text = "Some quick example text to build on the card title and make up the bulk of the card's content" %}
+<!--------- ------set card text------- ------->
+{%set image_url_card_one = "../static/cards.jpg" %}
+
+{% set card_two_text = "Some quick example text to build on the card title and make up the bulk of the card's content" %}
+{%set image_url_card_two = "../static/cards.jpg" %}
+
+{% set card_three_text = "Some quick example text to build on the card title and make up the bulk of the card's content" %}
+{%set image_url_card_three = "../static/cards.jpg" %}
+
+{% include 'cards-display.html' %}
+
+<!--------------------The end of one card  ---------------->
+{% include 'more.html' %}
+
 
 
     {% set article_para = "Proin lobortis nunc sed sollicitudin ullamcorper. 
