@@ -24,6 +24,28 @@
     
     {% include 'article-desc.html' %}
 
+    {% set title = "Skills" %}
+    {% include 'card-heading.html' %}
+
+    {% set title = "Python | C++ | JavaScript | Shell Scripting" %}
+    {% set title_two = "ML | Deep Learning | Data Cleaning | TensorFlow| Pytorch| Scikit-learn" %}
+    {% set title_three = "AWS | CI/CD | Ansible | Kubernetes | Version-control| Git" %}
+    {% set title_four = "Front-end| Sql/No Sql db | Agile Methodology | Automation | Testing " %}
+    {% include 'skills-heading.html' %}
+
+    {% set title = "Experience" %}
+    {% include 'card-heading.html' %}
+
+    
+
+    {% set heading_one = "ProPlaygrounds" %}
+    {% set heading_two = "SDE" %}
+    {% set desc_one = "Implemented a Machine Learning product recommendation system, based on the most sold products in recent months.utilizing Popularity-Based Recommendation and Content-Based Filtering algorithms." %}
+    {% set desc_two = "Achieved a notable 20% increase in user engagement, a 15% improvement in click-through rates, and a 10% increase in conversion rates" %}
+    
+    {% include 'experience-list.html' %}
+
+
     {% set article_para = "Proin lobortis nunc sed sollicitudin ullamcorper. 
     Praesent id tellus massa. Nullam sit amet sapien in nulla pellentesque eleifend. 
     Sed accumsan a massa semper facilisis. Nullam lacinia tellus quis libero ullamcorper, 
