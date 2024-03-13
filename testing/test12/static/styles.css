@@ -79,3 +79,12 @@
 .icon-color {
   color:black;
 }
+
+.leetcode-icon
+{
+  margin-top: -15px;
+}
+
+.hover-effect:hover {
+  content: url(../static/leetcode-color.svg); /* Change the image source on hover */
+}
