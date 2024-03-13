@@ -85,6 +85,18 @@
   margin-top: -15px;
 }
 
-.hover-effect:hover {
+.hover-effect-leetcode:hover {
   content: url(../static/leetcode-color.svg); /* Change the image source on hover */
+}
+
+.hover-effect-kaggle:hover {
+  content: url(../static/kaggle-color.svg); /* Change the image source on hover */
+}
+
+.hover-effect-github:hover {
+  content: url(../static/github-color.svg); /* Change the image source on hover */
+}
+
+.hover-effect-linkedin:hover {
+  content: url(../static/linkedin-color.svg); /* Change the image source on hover */
 }
