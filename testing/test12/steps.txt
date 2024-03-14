@@ -59,6 +59,19 @@ flask run --host=0.0.0.0 --port=5000 > output.log 2>&1 &
 disown
 
 
+another approach to run in background 
+
+sudo apt-get install screen 
+
+#star the screen session
+screen -S flask_server
+flask run --host=0.0.0.0 --port=5000
+
+#to reattach
+screen -r flask_server
+
+
+
 --------------------------------------------------------------------------
 
 for the cert bot 
