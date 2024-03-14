@@ -34,11 +34,23 @@ server {
 
 the nginx commands
 
+sudo apt update
+sudo apt install nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+
+
 sudo nginx -t
 sudo systemctl reload nginx
 
 ---------------------------------------------------------------------------------
 flask run --host=0.0.0.0 --port=5000
+
+kil flask by 
+
+ps aux | grep flask
+kil pid
 
 --------------------------------------------------------------------------
 

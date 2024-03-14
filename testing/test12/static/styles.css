@@ -104,3 +104,8 @@
 .social-media{
   height: 40px;
 }
+
+.hover-download:hover {
+   /* Change the image source on hover */
+   text-decoration: none;
+}
