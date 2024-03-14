@@ -31,6 +31,11 @@ def card():
 def about():
     return render_template('about.html')
 
+@app.route('/patching')
+def project():
+    return render_template('patching.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
