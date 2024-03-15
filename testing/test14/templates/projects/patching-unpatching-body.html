@@ -1,0 +1,42 @@
+
+<body class="background-color-body">
+  <div class="container main-container-color shadow-lg">
+    <!-- the container is the start of the container  that has boxes inside it -->
+  
+  
+  
+   
+  {% set title = titles[0] %}
+  {% include 'card-heading.html' %}
+
+  <!---------------------the image passed -------------->
+
+  {% include 'article-image.html' %}
+  
+  <!---------------the article ------------>    
+  
+  {% set article_para = article_paras[0] %}
+  {% include 'article-desc.html' %}
+
+  {% set title = titles[1] %}
+  {% include 'card-heading.html' %}
+
+  {% set article_para = article_paras[1] %}
+  {% include 'article-desc.html' %}
+
+  {% set title = titles[2] %}
+  {% include 'card-heading.html' %}
+
+
+  <!--------------set the card structure ------>
+  
+  {% include 'cards-display.html' %}
+  
+  <!--------------------The end of one card  ---------------->
+  {% include 'more.html' %}
+  
+  
+  
+  </div>
+  
+  </body>
