@@ -101,6 +101,10 @@
   content: url(../static/images/icons/linkedin-color.svg); /* Change the image source on hover */
 }
 
+.hover-effect-gitlab:hover {
+  content: url(../static/images/icons/gitlab-color.svg); /* Change the image source on hover */
+}
+
 .social-media{
   height: 40px;
 }
