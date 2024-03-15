@@ -59,7 +59,7 @@ def article_test(article_name):
         'image_url_card_three': "../static/cards.jpg"
 
     }
-    return render_template('article-page-test.html', **page_data)
+    return render_template('patching-unpatching.html', **page_data)
 
 
 
