@@ -18,7 +18,7 @@ def home():
 
 
 @app.route('/article')
-def contact():
+def article():
     return render_template('article-page.html')
 
 
@@ -34,6 +34,17 @@ def about():
 @app.route('/patching')
 def project():
     return render_template('patching.html')
+
+
+@app.route('/project/<article_name>')
+def article_test(article_name):
+    page_data = {
+        'article_name': 'patching-unpatching',
+        'first_heading': 'this is heading',
+        'para_content': "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        'second_heading': "This is heading",
+    }
+    return render_template('article-page-test.html', **page_data)
 
 
 
