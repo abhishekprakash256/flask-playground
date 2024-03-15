@@ -17,11 +17,6 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/article')
-def article():
-    return render_template('article-page.html')
-
-
 @app.route('/showcase')
 def card():
     return render_template('showcase.html')
