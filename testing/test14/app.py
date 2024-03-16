@@ -32,7 +32,7 @@ def project():
 
 
 @app.route('/projects/<article_name>')
-def article_test(article_name):
+def article(article_name):
     page_data = {
         'article_name': 'patching-unpatching',
         'titles': [
