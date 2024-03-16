@@ -54,6 +54,7 @@ def article(article_name):
         'image_url_card_three': "../static/images/misc/cards.jpg"
 
     }
+
     return render_template('projects/patching-unpatching/patching-unpatching.html', **page_data)
 
 
