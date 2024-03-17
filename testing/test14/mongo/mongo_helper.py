@@ -1,11 +1,7 @@
-
 #imports 
 from pymongo import MongoClient
 import subprocess
 
-
-
-import subprocess
 
 def check_mongo_status():
     try:
@@ -40,7 +36,7 @@ def create_mongo_client():
         try:
 
             # Attempt to create a MongoClient
-            client = MongoClient()
+            client = MongoClient("mongodb://localhost:27017/")
             print("MongoDB client created successfully.")
             return client
 
@@ -59,28 +55,30 @@ def create_mongo_client():
 
 
 #make the mongo client 
-db_client = create_mongo_client()
+mongo_client = create_mongo_client()
 
 
 
 #the helper class for the mongo functions 
-
+# Helper class for MongoDB functions
 class Helper_fun():
-
-    def make_database(self,db_name):
+    def make_database(self, db_name):
         """
-        make the database
+        Make the database
         """
+        # Print the list of existing databases before attempting to create the database
+        print("Existing databases before creating '{}':".format(db_name), mongo_client.list_database_names())
 
-        #make the database
-        if db_name not in db_client.list_database_names():
-        # Create the database
-            db = db_client[db_name]
+        # Make the database if it doesn't exist
+        if db_name not in mongo_client.list_database_names():
+            self.db = mongo_client[db_name]
             print("Database '{}' created.".format(db_name))
         else:
-            # If the database exists, select it
-            db = db_client[db_name]
+            self.db = mongo_client[db_name]
             print("Database '{}' already exists.".format(db_name))
+        
+        # Print the list of existing databases after attempting to create the database
+        print("Existing databases after creating '{}':".format(db_name), mongo_client.list_database_names())
 
 
     def make_collection(self,db_name,collection_name):
@@ -96,11 +94,5 @@ class Helper_fun():
 
 
 
-       
-
-
-
-
-
-#helper = Helper_fun()
-#helper.make_database("articles")
+helper = Helper_fun()
+helper.make_database("artiles")
