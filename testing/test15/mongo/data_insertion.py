@@ -1,6 +1,19 @@
 #imports 
 from mongo_helper import * 
+import json
 
+
+
+File_PATH = "../static/article_data.json"
+
+
+def read_page_data_from_json(file_path):
+    """
+    Read page data from a JSON file and return a list of dictionaries.
+    """
+    with open(file_path, 'r') as json_file:
+        data = json.load(json_file)
+    return data
 
 
 
@@ -20,8 +33,11 @@ for val in collection_lst:
 # Show the data in the collection
 helper.show_data()
 
-#helper.insert_data_one({"dummy2":True})
+
+page_data_list = read_page_data_from_json(File_PATH)
+
+helper.insert_data_one(page_data_list)
 
 #helper.delete_data({'dummy2': True})
 
-helper.show_collections()
+#helper.show_collections()
