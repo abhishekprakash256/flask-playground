@@ -106,6 +106,44 @@ class Helper_fun():
             print("No collection available. Please create a collection first.")
 
 
+    def insert_data_one(self,data):
+        """
+        Insert the data into the database and collection
+        """
+
+        #if the data is None 
+        if data is None:
+            return "data is Null"
+        
+
+        # Check if any documents match the criteria
+        existing_data = self.collection.find_one(data)
+
+        if existing_data is None:
+        
+        #insert the data
+            insert_data_res = self.collection.insert_one(data)
+
+        #condtion to check for the data is inserted 
+            if insert_data_res.acknowledged :
+                print("Data insserted succesfuly")
+    
+            else:
+                print("Data not inserted")
+        
+        else:
+            print("Data  already exist")
+
+
+    def delete_data(self):
+        """
+        The function to delete the data
+        """
+        pass
+
+
+
+
 
 
 
@@ -122,3 +160,5 @@ helper.make_database_and_collection("articles", "projects")
 
 # Show the data in the collection
 helper.show_data()
+
+helper.insert_data_one({"dummy2":True})
