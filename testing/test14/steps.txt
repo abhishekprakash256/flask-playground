@@ -82,3 +82,12 @@ sudo certbot --nginx -d meabhi.me
 
 --------------------------------------------------------------------------------
 
+mongo commands
+
+
+mongosh 
+use your_database_name
+show collections
+db.dropDatabase()  #delete the dropDatabase
+db.<collection_name>.drop()  #drop the 
+db.my_collection.find() #show all the data in collection
