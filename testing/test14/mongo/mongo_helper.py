@@ -91,6 +91,16 @@ class Helper_fun():
         # Print the list of existing databases after attempting to create the database
         print("Existing databases after creating '{}':".format(db_name), mongo_client.list_database_names())
 
+    def show_collections(self):
+        """
+        show the collections
+        """
+
+        collections = self.db.list_collection_names()
+
+        for collection_lst in collections:
+            print(collection_lst)
+
     def show_data(self):
         """
         Show the data in the collection
@@ -135,16 +145,25 @@ class Helper_fun():
             print("Data  already exist")
 
 
-    def delete_data(self):
+    def delete_data(self,data):
         """
         The function to delete the data
         """
-        pass
+        #if the data is None 
+        if data is None:
+            return "data is Null"
+        
 
+        # Check if any documents match the criteria
+        existing_data = self.collection.find_one(data)
 
+        # Delete a single document that matches the criteria
+        delete_result = self.collection.delete_one(data)
 
-
-
+        if delete_result.deleted_count == 1:
+            print("Data deleted successfully.")
+        else:
+            print("No record matched the data")
 
 
 
@@ -155,10 +174,15 @@ class Helper_fun():
 # Create an instance of the Helper_fun class
 helper = Helper_fun()
 
+
 # Make the database and collection
-helper.make_database_and_collection("articles", "projects")
+helper.make_database_and_collection("articles", "life")
 
 # Show the data in the collection
 helper.show_data()
 
 helper.insert_data_one({"dummy2":True})
+
+helper.delete_data({'dummy2': True})
+
+helper.show_collections()
