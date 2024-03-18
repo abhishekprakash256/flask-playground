@@ -3,6 +3,12 @@ from pymongo import MongoClient
 import subprocess
 
 
+#const values
+collection_lst = ["projects","tech","life"]
+
+
+
+
 def check_mongo_status():
     try:
         # Execute the command to check MongoDB server status
@@ -86,10 +92,23 @@ class Helper_fun():
             # If the database exists, select it
             self.db = mongo_client[db_name]
             self.collection = self.db[db_collection]
-            print("Database '{}' and collection '{}' already exist.".format(db_name, db_collection))
+            print("Database '{}' already exist.".format(db_name, db_collection))
         
         # Print the list of existing databases after attempting to create the database
         print("Existing databases after creating '{}':".format(db_name), mongo_client.list_database_names())
+
+    def make_collections(self,collection_name):
+        """
+        The function to make the collection in the database
+        """
+        if collection_name not in self.db.list_collection_names():
+            self.db.create_collection(collection_name)
+            print("Collection '{}' created.".format(collection_name))
+
+        else:
+            print("Collection '{}' already exists.".format(collection_name))
+
+
 
     def show_collections(self):
         """
@@ -136,7 +155,7 @@ class Helper_fun():
 
         #condtion to check for the data is inserted 
             if insert_data_res.acknowledged :
-                print("Data insserted succesfuly")
+                print("Data inserted succesfuly")
     
             else:
                 print("Data not inserted")
@@ -176,13 +195,23 @@ helper = Helper_fun()
 
 
 # Make the database and collection
-helper.make_database_and_collection("articles", "life")
+
+# Make the database and collection
+
+
+# Make the database and collection
+helper.make_database_and_collection("articles", "projects")
+
+#make the collectios
+for val in collection_lst:
+    helper.make_collections(val)
+
 
 # Show the data in the collection
 helper.show_data()
 
-helper.insert_data_one({"dummy2":True})
+#helper.insert_data_one({"dummy2":True})
 
-helper.delete_data({'dummy2': True})
+#helper.delete_data({'dummy2': True})
 
 helper.show_collections()
