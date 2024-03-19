@@ -11,8 +11,10 @@ collections = ["projects","tech","life"]
 
 page_data_list = read_page_data_from_json(File_PATH)
 
+
 # Create an instance of the Helper_fun class
 helper = Helper_fun()
+
 
 # Make the database and collection
 helper.make_database_and_collection(db_name, collections[0])
@@ -31,8 +33,6 @@ helper.show_collections(db_name)
 helper.insert_data(db_name,collections[0],page_data_list)
 
 #show the data 
-helper.show_data(db_name,collections[0])
-
-#the data insertion is working and tested 
-
+#helper.show_data(db_name,collections[0])
+#article_data = helper.show_article_data(db_name,collections[0],{'article_name': 'patching-unpatching'})
 

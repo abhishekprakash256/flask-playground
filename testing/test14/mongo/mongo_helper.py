@@ -122,7 +122,7 @@ class Helper_fun():
 
 
 
-    def show_data(self,db_name,collection_name):
+    def show_all_data(self,db_name,collection_name):
         """
         Show the data in the collection
         """
@@ -139,6 +139,21 @@ class Helper_fun():
                 print(document)
         else:
             print("No collection available. Please create a collection first.")
+        
+    def show_article_data(self,db_name,collection_name,article_name):
+        """
+        Find the specific data from the collection
+        """
+
+        db = mongo_client[db_name]
+        collection = db[collection_name]
+
+        if collection is not None:
+            # Retrieve all documents in the collection
+            page_data = collection.find_one(article_name)
+        
+        return page_data
+
 
 
     def insert_data(self,db_name,collection_name,data):
