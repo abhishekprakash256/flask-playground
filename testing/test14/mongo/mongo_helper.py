@@ -64,9 +64,6 @@ mongo_client = create_mongo_client()
 #the helper class for the mongo functions 
 # Helper class for MongoDB functions
 class Helper_fun():
-    def __init__(self):
-        self.db = None
-        self.collection = None
 
     def make_database_and_collection(self, db_name, db_collection):
         """
@@ -78,31 +75,34 @@ class Helper_fun():
         # Make the database if it doesn't exist
         if db_name not in mongo_client.list_database_names():
             # Create the database
-            self.db = mongo_client[db_name]
+            db = mongo_client[db_name]
 
             # Create the collection
-            self.collection = self.db[db_collection]
+            collection = db[db_collection]
 
             # Insert dummy data into the collection
             dummy_data = {"dummy_data": True}
-            insert_data = self.collection.insert_one(dummy_data)
+            insert_data = collection.insert_one(dummy_data)
 
             print("Database '{}' and collection '{}' created.".format(db_name, db_collection))
         else:
             # If the database exists, select it
-            self.db = mongo_client[db_name]
-            self.collection = self.db[db_collection]
+            db = mongo_client[db_name]
+            collection = db[db_collection]
             print("Database '{}' already exist.".format(db_name, db_collection))
         
         # Print the list of existing databases after attempting to create the database
         print("Existing databases after creating '{}':".format(db_name), mongo_client.list_database_names())
 
-    def make_collections(self,collection_name):
+    def make_collections(self,db_name,collection_name):
         """
         The function to make the collection in the database
         """
-        if collection_name not in self.db.list_collection_names():
-            self.db.create_collection(collection_name)
+        db = mongo_client[db_name]
+
+
+        if collection_name not in db.list_collection_names():
+            db.create_collection(collection_name)
             print("Collection '{}' created.".format(collection_name))
 
         else:
@@ -110,23 +110,30 @@ class Helper_fun():
 
 
 
-    def show_collections(self):
+    def show_collections(self,db_name):
         """
         show the collections
         """
+        db = mongo_client[db_name]
 
-        collections = self.db.list_collection_names()
+        collections = db.list_collection_names()
 
         for collection_lst in collections:
             print(collection_lst)
 
-    def show_data(self):
+
+
+    def show_data(self,db_name,collection_name):
         """
         Show the data in the collection
         """
-        if self.collection is not None:
+        db = mongo_client[db_name]
+        collection = db[collection_name]
+
+
+        if collection is not None:
             # Retrieve all documents in the collection
-            documents = self.collection.find()
+            documents = collection.find()
 
             # Print each document
             for document in documents:
@@ -135,10 +142,12 @@ class Helper_fun():
             print("No collection available. Please create a collection first.")
 
 
-    def insert_data_one(self,data):
+    def insert_data_one(self,db_name,collection_name,data):
         """
         Insert the data into the database and collection
         """
+        db = mongo_client[db_name]
+        collection = db[collection_name]
 
         #if the data is None 
         if data is None:
@@ -146,16 +155,18 @@ class Helper_fun():
         
 
         # Check if any documents match the criteria
-        existing_data = self.collection.find_one(data)
+        existing_data = collection.find_one(data)
 
         if existing_data is None:
         
         #insert the data
-            insert_data_res = self.collection.insert_one(data)
+            
+            for page_data in data:
+                insert_data_res = collection.insert_one(page_data)
 
         #condtion to check for the data is inserted 
-            if insert_data_res.acknowledged :
-                print("Data inserted succesfuly")
+                if insert_data_res.acknowledged :
+                    print("Data inserted succesfuly")
     
             else:
                 print("Data not inserted")
@@ -164,7 +175,7 @@ class Helper_fun():
             print("Data  already exist")
 
 
-    def delete_data(self,data):
+    def delete_data(self,db_name,collection_name,data):
         """
         The function to delete the data
         """
@@ -172,12 +183,14 @@ class Helper_fun():
         if data is None:
             return "data is Null"
         
+        db = mongo_client[db_name]
+        collection = db[collection_name]
 
         # Check if any documents match the criteria
-        existing_data = self.collection.find_one(data)
+        existing_data = collection.find_one(data)
 
         # Delete a single document that matches the criteria
-        delete_result = self.collection.delete_one(data)
+        delete_result = collection.delete_one(data)
 
         if delete_result.deleted_count == 1:
             print("Data deleted successfully.")
@@ -185,10 +198,7 @@ class Helper_fun():
             print("No record matched the data")
 
 
-
-
-
-
+"""
 
 # Create an instance of the Helper_fun class
 helper = Helper_fun()
@@ -208,3 +218,4 @@ helper.show_data()
 #helper.delete_data({'dummy2': True})
 
 helper.show_collections()
+"""

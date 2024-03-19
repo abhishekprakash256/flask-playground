@@ -1,5 +1,4 @@
 import json
-from pymongo import MongoClient
 
 
 File_PATH = "../static/article_data.json"
@@ -13,10 +12,11 @@ def read_page_data_from_json(file_path):
         data = json.load(json_file)
     return data
 
+
+
+"""
 def insert_page_data_into_mongodb(page_data_list, db_name, collection_name):
-    """
-    Insert page data into a MongoDB collection.
-    """
+
     client = MongoClient()  # Connect to MongoDB
     db = client[db_name]     # Select the database
     collection = db[collection_name]  # Select the collection
@@ -29,9 +29,7 @@ def insert_page_data_into_mongodb(page_data_list, db_name, collection_name):
 # Path to the JSON file
 
 def retrieve_page_data_from_mongodb(db_name, collection_name):
-    """
-    Retrieve page data from MongoDB collection.
-    """
+
     client = MongoClient()  # Connect to MongoDB
     db = client[db_name]     # Select the database
     collection = db[collection_name]  # Select the collection
@@ -68,3 +66,5 @@ for data in page_data:
 
 # Insert the page data into MongoDB
 #insert_page_data_into_mongodb(page_data_list, db_name, collection_name)
+
+"""
