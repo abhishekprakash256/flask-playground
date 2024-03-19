@@ -1,7 +1,6 @@
 #imports 
 from mongo_helper import * 
 from read_data import *
-import json
 
 
 #const files
@@ -20,6 +19,9 @@ helper.make_database_and_collection(db_name, collections[0])
 helper.make_database_and_collection(db_name, collections[1])
 helper.make_database_and_collection(db_name, collections[2])
 
+#delete the dummy data from 1st collection
+helper.delete_data(db_name,collections[0],{'dummy_data': True})
+
 
 #show the collections
 helper.show_collections(db_name)
@@ -29,4 +31,5 @@ helper.insert_data(db_name,collections[0],page_data_list)
 
 #show the data 
 helper.show_data(db_name,collections[0])
+
 

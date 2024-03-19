@@ -8,7 +8,6 @@ collection_lst = ["projects","tech","life"]
 
 
 
-
 def check_mongo_status():
     try:
         # Execute the command to check MongoDB server status
