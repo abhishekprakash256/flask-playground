@@ -1,6 +1,6 @@
 #imports 
-from .mongo_helper import * 
-from .read_data import *
+from mongo_helper import * 
+from read_data import *
 
 
 #const files

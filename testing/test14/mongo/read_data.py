@@ -1,7 +1,6 @@
 import json
 
 
-
 def read_page_data_from_json(file_path):
     """
     Read page data from a JSON file and return a list of dictionaries.

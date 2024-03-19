@@ -5,7 +5,7 @@ dummy code
 """
 #imports
 from flask import Flask, render_template
-from mongo import data_insertion
+from data_insertion import show_article_data
 
 
 #const
@@ -40,7 +40,7 @@ def project():
 @app.route('/projects/<article_name>')
 def article(article_name):
 
-    page_data2 = data_insertion.helper.show_article_data(db_name,collections[0],{'article_name': 'patching-unpatching'})
+    page_data2 = show_article_data(db_name,collections[0],{'article_name': 'patching-unpatching'})
 
     return render_template('projects/patching-unpatching/patching-unpatching.html', **page_data2)
 
@@ -48,7 +48,7 @@ def article(article_name):
 @app.route('/test/<article_name>')
 def article_test(article_name):
 
-    page_data = data_insertion.helper.show_article_data(db_name,collections[0],{'article_name': 'another-article'})
+    page_data = show_article_data(db_name,collections[0],{'article_name': 'another-article'})
 
     return render_template('projects/patching-unpatching/patching-unpatching.html', **page_data)  
 
