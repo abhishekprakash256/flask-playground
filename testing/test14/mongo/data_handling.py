@@ -8,7 +8,7 @@ from read_data_json import *
 
 
 #const files
-File_PATH = "static/article_data.json"
+File_PATH = "../static/article_data.json"
 db_name = "articles"
 collections = ["projects","tech","life"]
 
