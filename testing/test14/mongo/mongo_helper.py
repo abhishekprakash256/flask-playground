@@ -211,4 +211,32 @@ class Helper_fun():
         else:
             print("No record matched the data")
 
+    def modify_data_one(self,db_name,collection_name,filter_criteria,new_data):
+        """
+        The function to modify the data in mongodb as per collection and db
+        """
+
+        #if the data is None 
+        if new_data is None:
+            return "data is Null"
+    
+        db = mongo_client[db_name]
+        collection = db[collection_name]
+    
+        #update the data in collection
+        if collection.update_one(filter_criteria,new_data):  # Update the data 
+            print("Update succesfull")
+        
+        else:
+            print("Update failed")
+    
+
+        
+
+
+
+
+
+    
+        
 

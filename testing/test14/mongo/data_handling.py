@@ -1,5 +1,9 @@
-#imports 
+"""
+The file has the calling of the methods to 
+"""
 
+
+#imports 
 #the helper funciton to help the mongo db data insertion 
 from mongo_helper import * 
 
@@ -15,28 +19,35 @@ collections = ["projects","tech","life"]
 
 if __name__ == "__main__":
     #read the data from the json file 
-    page_data_list = read_page_data_from_json(File_PATH)
+    #page_data_list = read_page_data_from_json(File_PATH)
 
     # Create an instance of the Helper_fun class
     helper = Helper_fun()
 
     # Make the database and collection
-    helper.make_database_and_collection(db_name, collections[0])
+    #helper.make_database_and_collection(db_name, collections[0])
 
     #delete the dummy data from 1st collection
-    helper.delete_data(db_name,collections[0],{'dummy_data': True})
+    #helper.delete_data(db_name,collections[0],{'dummy_data': True})
 
     #make the collections 
-    helper.make_collections(db_name,collection_lst[1])
-    helper.make_collections(db_name,collection_lst[2])
+    #helper.make_collections(db_name,collections[1])
+    #helper.make_collections(db_name,collections[2])
 
     #show the collections
     helper.show_collections(db_name)
 
     #insert the data in collection 0 
-    helper.insert_data(db_name,collections[0],page_data_list)
+    #helper.insert_data(db_name,collections[0],page_data_list)
 
     #show the data 
     #helper.show_data(db_name,collections[0])
     #article_data = helper.show_article_data(db_name,collections[0],{'article_name': 'patching-unpatching'})
+
+    #modify the data
+    #filter_criteria = {"article_name":"another-article"}
+    #new_data = {"$set": {"article_name": "test-article"}}
+    #helper.modify_data_one(db_name,collections[0],filter_criteria,new_data )
+
+
 
