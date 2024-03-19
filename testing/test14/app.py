@@ -3,9 +3,14 @@ make the main app for the website
 dummy code
 
 """
-
+#imports
 from flask import Flask, render_template
-from mongo.data_insertion import *
+from mongo import data_insertion
+
+
+#const
+db_name = "articles"
+collections = ["projects","tech","life"]
 
 
 app = Flask(__name__)
@@ -34,6 +39,9 @@ def project():
 
 @app.route('/projects/<article_name>')
 def article(article_name):
+
+    page_data2 = data_insertion.helper.show_article_data(db_name,collections[0],{'article_name': 'patching-unpatching'})
+    
     page_data = {
         'article_name': 'patching-unpatching',
         'titles': [
@@ -56,7 +64,7 @@ def article(article_name):
 
     }
 
-    return render_template('projects/patching-unpatching/patching-unpatching.html', **page_data)
+    return render_template('projects/patching-unpatching/patching-unpatching.html', **page_data2)
 
 
 

@@ -1,8 +1,6 @@
 import json
 
 
-File_PATH = "../static/article_data.json"
-
 
 def read_page_data_from_json(file_path):
     """
