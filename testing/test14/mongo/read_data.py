@@ -15,16 +15,7 @@ def read_page_data_from_json(file_path):
 
 
 """
-def insert_page_data_into_mongodb(page_data_list, db_name, collection_name):
 
-    client = MongoClient()  # Connect to MongoDB
-    db = client[db_name]     # Select the database
-    collection = db[collection_name]  # Select the collection
-
-    # Insert each page data dictionary into the collection
-    for page_data in page_data_list:
-        collection.insert_one(page_data)
-    print("Page data inserted into MongoDB successfully.")
 
 # Path to the JSON file
 
