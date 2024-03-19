@@ -37,6 +37,7 @@ def project():
     return render_template('patching.html')
 
 
+#make these two function combined and use a json file too read the template and injest data as per requested 
 @app.route('/projects/<article_name>')
 def article(article_name):
 
@@ -45,12 +46,13 @@ def article(article_name):
     return render_template('projects/patching-unpatching/patching-unpatching.html', **page_data2)
 
 
-@app.route('/test/<article_name>')
+@app.route('/test/article')
 def article_test(article_name):
 
     page_data = get_article_data(db_name,collections[0],{'article_name': 'another-article'})
 
     return render_template('projects/patching-unpatching/patching-unpatching.html', **page_data)  
+
 
 
 
