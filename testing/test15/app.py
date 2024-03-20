@@ -33,10 +33,6 @@ def card():
 def about():
     return render_template('about.html')
 
-@app.route('/patching')
-def project():
-    return render_template('patching.html')
-
 
 
 @app.route('/projects/<article_name>')
