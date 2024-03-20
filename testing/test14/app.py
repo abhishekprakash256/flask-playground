@@ -57,6 +57,7 @@ def article_first(article_name):
     return render_template('projects/article.html', **page_data)
 
 
+
 """
 @app.route('/test/article')
 def article_test(article_name):
