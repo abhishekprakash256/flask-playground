@@ -10,7 +10,7 @@ from read_data_mongo import get_article_data
 
 
 #const
-db_name = "articles"
+db_name = ["articles"]
 collections = ["projects","tech","life"]
 
 
@@ -34,11 +34,10 @@ def about():
     return render_template('about.html')
 
 
-
 @app.route('/projects/<article_name>')
 def article_first(article_name):
 
-    page_data = get_article_data(db_name,collections[0],{'article_name': article_name})
+    page_data = get_article_data(db_name[0],collections[0],{'article_name': article_name})
 
     return render_template('projects/article.html', **page_data)
 
