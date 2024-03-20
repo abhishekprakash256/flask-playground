@@ -7,7 +7,9 @@
   
    
   {% set title = titles[0] %}
+  {% if title %}
   {% include 'reusable/card-heading.html' %}
+  {% endif %}
 
   <!---------------------the image passed -------------->
 
@@ -16,18 +18,25 @@
   <!---------------the article ------------>    
   
   {% set article_para = article_paras[0] %}
+  {% if article_para %}
   {% include 'reusable/article-desc.html' %}
+  {% endif %}
+
 
   {% set title = titles[1] %}
+  {% if title %}
   {% include 'reusable/card-heading.html' %}
-
+  {% endif %}
+ 
   {% set article_para = article_paras[1] %}
+  {% if article_para %}
   {% include 'reusable/article-desc.html' %}
-
+  {% endif %}
+    
   {% set title = titles[2] %}
+  {% if title %}
   {% include 'reusable/card-heading.html' %}
-
-
+  {% endif %}
   <!--------------set the card structure ------>
   
   {% include 'reusable/cards-display.html' %}

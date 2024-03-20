@@ -20,10 +20,11 @@ app = Flask(__name__)
 app.config['STATIC_FOLDER'] = 'static'
 
 # Load the route-template mapping and article data from the JSON file
+"""
 with open('./static/route_template_map.json', 'r') as file:
     route_template_map = json.load(file)
     #print(route_template_map)
-
+"""
 
 
 @app.route('/')
@@ -49,6 +50,25 @@ def project():
 @app.route('/projects/<article_name>')
 def article_first(article_name):
 
+    page_data = get_article_data(db_name,collections[0],{'article_name': article_name})
+
+    print(page_data)
+
+    return render_template('projects/article.html', **page_data)
+
+
+"""
+@app.route('/test/article')
+def article_test(article_name):
+
+    page_data = get_article_data(db_name,collections[0],{'article_name': 'another-article'})
+
+    return render_template('projects/federated-learning/federated-learning.html', **page_data)  
+
+
+@app.route('/projects/<article_name>')
+def article_first(article_name):
+
     if article_name not in route_template_map:
         abort(404)
 
@@ -58,17 +78,7 @@ def article_first(article_name):
     print(page_data)
 
     return render_template(template_path, **page_data)
-
-
-
-
-@app.route('/test/article')
-def article_test(article_name):
-
-    page_data = get_article_data(db_name,collections[0],{'article_name': 'another-article'})
-
-    return render_template('projects/federated-learning/federated-learning.html', **page_data)  
-
+"""
 
 
 
