@@ -44,8 +44,6 @@ def article_first(article_name):
 
     page_data = get_article_data(db_name,collections[0],{'article_name': article_name})
 
-    print(page_data)
-
     return render_template('projects/article.html', **page_data)
 
 
