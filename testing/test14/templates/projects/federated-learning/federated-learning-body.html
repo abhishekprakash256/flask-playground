@@ -15,8 +15,10 @@
   
   <!---------------the article ------------>    
   
+  {% if article_para %}
   {% set article_para = article_paras[0] %}
   {% include 'reusable/article-desc.html' %}
+  {% endif %}
 
   {% set title = titles[1] %}
   {% include 'reusable/card-heading.html' %}
