@@ -19,7 +19,7 @@ collections = ["projects","tech","life"]
 
 if __name__ == "__main__":
     #read the data from the json file 
-    #page_data_list = read_page_data_from_json(File_PATH)
+    page_data_list = read_page_data_from_json(File_PATH)
 
     # Create an instance of the Helper_fun class
     helper = Helper_fun()
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     #helper.insert_data(db_name,collections[0],page_data_list)
 
     #show the data 
-    #helper.show_data(db_name,collections[0])
+    helper.show_all_data(db_name,collections[0])
     #article_data = helper.show_article_data(db_name,collections[0],{'article_name': 'patching-unpatching'})
 
     #modify the data
