@@ -37,12 +37,59 @@ def section():
     return render_template('section.html')
 
 
-@app.route('/tech')
-def tech():
+@app.route('/<section_name>')
+def tech(section_name):
+        
+        
+    page_data = {
+        "section_name": "tech",
+        "card_one_texts": [
+            "Some quick example text to build on the card title and make up the bulk of the card's content",
+            "Some quick example text to build on the card title and make up the bulk of the card's content",
+            "Some quick example text to build on the card title and make up the bulk of the card's content",
+            "Some quick example text to build on the card title and make up the bulk of the card's content",
+            "Some quick example text to build on the card title and make up the bulk of the card's content",
+            "Some quick example text to build on the card title and make up the bulk of the card's content",
+            "Some quick example text to build on the card title and make up the bulk of the card's content",
+            "Some quick example text to build on the card title and make up the bulk of the card's content",
+            "Some quick example text to build on the card title and make up the bulk of the card's content",
+        ],
 
-    return render_template('section.html')
+        "image_urls_card_one": [
+            "../static/images/misc/cards.jpg",
+             "../static/images/misc/cards.jpg",
+              "../static/images/misc/cards.jpg",
+               "../static/images/misc/cards.jpg",
+                "../static/images/misc/cards.jpg",
+                 "../static/images/misc/cards.jpg",
+                  "../static/images/misc/cards.jpg",
+                   "../static/images/misc/cards.jpg",
+                    "../static/images/misc/cards.jpg",
+        ],
+
+                "card_first_urls": [
+            "../static/images/misc/cards.jpg",
+             "../static/images/misc/cards.jpg",
+              "../static/images/misc/cards.jpg",
+               "../static/images/misc/cards.jpg",
+                "../static/images/misc/cards.jpg",
+                 "../static/images/misc/cards.jpg",
+                  "../static/images/misc/cards.jpg",
+                   "../static/images/misc/cards.jpg",
+                    "../static/images/misc/cards.jpg",
+        ],
 
 
+
+
+        "more_link": "..\\static\\images\\misc\\cards.jpg"
+    }
+
+    return render_template('section.html',**page_data)
+
+
+
+"""
 @app.route('/projects')
 def projects():
 
@@ -53,7 +100,7 @@ def projects():
 def life():
 
     return render_template('section.html')
-
+"""
 
 
 @app.route('/projects/<article_name>')
