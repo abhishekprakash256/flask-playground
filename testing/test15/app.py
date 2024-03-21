@@ -24,14 +24,36 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/showcase')
-def card():
-    return render_template('showcase.html')
-
-
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+#use this in future for each section till artcles need to be passed
+@app.route('/section')
+def section():
+
+    #page_data = get_article_data(db_name[0],collections[0],{'article_name': article_name})
+
+    return render_template('section.html')
+
+
+@app.route('/tech')
+def tech():
+
+    return render_template('section.html')
+
+
+@app.route('/projects')
+def projects():
+
+    return render_template('section.html')
+
+
+@app.route('/life')
+def life():
+
+    return render_template('section.html')
+
 
 
 @app.route('/projects/<article_name>')
@@ -40,6 +62,7 @@ def article_first(article_name):
     page_data = get_article_data(db_name[0],collections[0],{'article_name': article_name})
 
     return render_template('projects/article.html', **page_data)
+
 
 
 
