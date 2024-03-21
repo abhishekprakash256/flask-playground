@@ -42,7 +42,7 @@ def tech(section_name):
         
         
     page_data = {
-        "section_name": "tech",
+        "section_name": "Tech",
         "card_one_texts": [
             "Some quick example text to build on the card title and make up the bulk of the card's content",
             "Some quick example text to build on the card title and make up the bulk of the card's content",
