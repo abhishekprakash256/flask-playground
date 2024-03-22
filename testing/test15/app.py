@@ -85,6 +85,8 @@ def tech(section_name):
         "more_link": "..\\static\\images\\misc\\cards.jpg"
     }
 
+
+
     return render_template('section.html',**page_data)
 
 

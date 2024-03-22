@@ -1,0 +1,43 @@
+{
+    "section_name": "Project",
+    "card_one_texts": [
+        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Some quick example text to build on the card title and make up the bulk of the card's content"
+    ],
+
+    "image_urls_card_one": [
+        "../static/images/misc/cards.jpg",
+         "../static/images/misc/cards.jpg",
+          "../static/images/misc/cards.jpg",
+           "../static/images/misc/cards.jpg",
+            "../static/images/misc/cards.jpg",
+             "../static/images/misc/cards.jpg",
+              "../static/images/misc/cards.jpg",
+               "../static/images/misc/cards.jpg",
+                "../static/images/misc/cards.jpg"
+    ],
+
+            "card_first_urls": [
+        "../static/images/misc/cards.jpg",
+         "../static/images/misc/cards.jpg",
+          "../static/images/misc/cards.jpg",
+           "../static/images/misc/cards.jpg",
+            "../static/images/misc/cards.jpg",
+             "../static/images/misc/cards.jpg",
+              "../static/images/misc/cards.jpg",
+               "../static/images/misc/cards.jpg",
+                "../static/images/misc/cards.jpg"
+    ],
+
+
+
+
+    "more_link": "..\\static\\images\\misc\\cards.jpg"
+}
