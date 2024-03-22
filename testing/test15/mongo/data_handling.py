@@ -16,12 +16,9 @@ from read_data_json import *
 PROJECT_ARTICLE_FILE_PATH = "../static/project_article_data.json"
 
 
-
-
 #section file path
-LIFE_SECTION_FILE_PATH = "../static/life_section_data.json"
-PROJECT_SECTION_FILE_PATH = "../static/project_section_data.json"
-TECH_SECTION_FILE_PATH =  "../static/tech_section_data.json"
+
+SECTION_FILE_PATH = "../static/section_data.json"
 
 
 
@@ -29,36 +26,36 @@ TECH_SECTION_FILE_PATH =  "../static/tech_section_data.json"
 db_name = ["articles","section"]
 
 #collection names in database 
-collections = ["projects","tech","life"]
+collections = ["projects","section_data"]
 
 
 
 
 if __name__ == "__main__":
     #read the data from the json file 
-    page_data_list = read_page_data_from_json(File_PATH = LIFE_SECTION_FILE_PATH)
+    #page_data_list = read_page_data_from_json(file_path =  SECTION_FILE_PATH)
 
     # Create an instance of the Helper_fun class
     helper = Helper_fun()
 
     # Make the database and collection
-    #helper.make_database_and_collection(db_name, collections[0])
+    #helper.make_database_and_collection(db_name[1], collections[1])
 
     #delete the dummy data from 1st collection
-    #helper.delete_data(db_name,collections[0],{'dummy_data': True})
+    #helper.delete_data(db_name[1],collections[1],{'dummy_data': True})
 
     #make the collections 
     #helper.make_collections(db_name,collections[1])
     #helper.make_collections(db_name,collections[2])
 
     #show the collections
-    helper.show_collections(db_name[0])
+    helper.show_collections(db_name[1])
 
     #insert the data in collection 0 
-    #helper.insert_data(db_name,collections[0],page_data_list)
+    #helper.insert_data(db_name[1],collections[1],page_data_list)
 
     #show the data 
-    helper.show_all_data(db_name[0],collections[0])
+    helper.show_all_data(db_name[1],collections[1])
     #article_data = helper.show_article_data(db_name,collections[0],{'article_name': 'patching-unpatching'})
 
     #modify the data

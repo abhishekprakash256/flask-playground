@@ -8,6 +8,11 @@ import subprocess
 #make the mongo client 
 mongo_client = create_mongo_client()
 
+db_name = ["articles","section"]
+collections = ["projects","tech","life"]
+
+
+article_name = {'section_name': 'project'}
 
 def get_article_data(db_name,collection_name,article_name):
     """
@@ -24,8 +29,5 @@ def get_article_data(db_name,collection_name,article_name):
     return page_data
 
 
-#for test testing the data 
 
-#data = show_article_data(db_name,collections[0],{'article_name': 'patching-unpatching'})
-
-#print(data)
+print(get_article_data(db_name[1],collections[0],article_name))
