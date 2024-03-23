@@ -46,10 +46,10 @@ def section(section_name):
     return render_template('section.html',**page_data)
 
 
-
+@app.route('/dummy')
 def dummy():
     articles_json = [
-        {"title": "Article 1 Title", "image": "image1.jpg", "article_para": "Article 1 Paragraph", "markdown_data": "Article 1 Markdown"},
+        {"title": "Article 1 Title", "image": "image1.jpg", "article_para": "", "markdown_data": "Article 1 Markdown"},
         {"title": "Article 2 Title", "image": "image2.jpg", "article_para": "Article 2 Paragraph", "markdown_data": "Article 2 Markdown"}
         # Add more articles as needed
     ]

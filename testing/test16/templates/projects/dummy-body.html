@@ -1,21 +1,29 @@
 <body class="background-color-body">
     <div class="container main-container-color shadow-lg">
         <!-- the container is the start of the container  that has boxes inside it -->
-        {% for article in articles %}
-        {% if article.title %}
-        {% include 'reusable/card-heading.html' with title=article.title %}
+        {% for article in articles_data %}
+
+        {% set title = article.title %}
+        {% if title %}
+        {% include 'reusable/card-heading.html'%}
         {% endif %}
 
-        {% if article.image %}
-        {% include 'reusable/article-image.html' with image=article.image %}
+        {% set image_src = article.image %}
+        {% if image_src %}
+        {% include 'reusable/article-image.html'%}
         {% endif %}
 
-        {% if article.article_para %}
-        {% include 'reusable/article-desc.html' with article_para=article.article_para %}
+
+        {% set article_para = article.article_para %}
+
+        {% if article_para %}
+        {% include 'reusable/article-desc.html' %}
         {% endif %}
 
-        {% if article.markdown_data %}
-        {% include 'reusable/markdown-block.html' with markdown_data=article.markdown_data %}
+
+        {% set markdown_data = article.markdown_data %}
+        {% if markdown_data %}
+        {% include 'reusable/markdown-block.html' %}
         {% endif %}
         {% endfor %}
 
