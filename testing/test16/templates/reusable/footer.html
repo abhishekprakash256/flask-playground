@@ -1,0 +1,72 @@
+
+<!-- Bootstrap CSS -->
+<!-- Custom CSS -->
+<style>
+  .submit-success-message {
+    color: green;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+</style>
+
+<!------------------the contact me box ----------------->
+<div class="row bg-light">
+  <div class="col text-center">
+    <h1 class="bio-font font-color-class heading-responsive-font mt-3">Contact Me</h1>
+  </div>
+</div>
+
+<!----------------- the contact box ----------->
+<div class="row bg-light flex-column flex-md-row">
+  <div class="col"></div>
+  <div class="col text-center"> <!-- Add text-center class here -->
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+      </div>
+      <div id="successMessage" class="submit-success-message" style="display: none;">Message sent successfully!</div>
+      <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+    </form>
+  </div>
+  <div class="col"></div>
+</div>
+
+<!----- the footer -->
+<div class="container-fluid bg-light">
+  <!----------------------------------->
+  <div class="row">
+    <div class="col text-center mt-2">
+      © 2024 Copyright:
+      <a class="text-dark" href="https://meabhi.me/">meabhi.me</a>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+
+<!-- Custom JavaScript -->
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    
+    // Simulate form submission process
+    // Here, you can implement your logic to actually submit the form data
+    
+    // Display success message
+    document.getElementById("successMessage").style.display = "block";
+    
+    // Disable the submit button after submission
+    document.getElementById("submitButton").disabled = true;
+  });
+</script>
+
