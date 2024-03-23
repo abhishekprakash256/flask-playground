@@ -1,33 +1,17 @@
-#imports 
-from pymongo import MongoClient
-from mongo.mongo_helper import check_mongo_status, create_mongo_client
-import subprocess
+def dummy():
+    articles_json = [
+        {"title": "Article 1 Title", "image": "image1.jpg", "article_para": "Article 1 Paragraph", "markdown_data": "Article 1 Markdown"},
+        {"title": "Article 2 Title", "image": "image2.jpg", "article_para": "Article 2 Paragraph", "markdown_data": "Article 2 Markdown"}
+        # Add more articles as needed
+    ]
 
+    page_data = {"articles_data": articles_json}  # Assuming there are other data in page_data
 
-
-#make the mongo client 
-mongo_client = create_mongo_client()
-
-db_name = ["articles","section"]
-collections = ["projects","tech","life"]
-
-
-article_name = {'section_name': 'project'}
-
-def get_article_data(db_name,collection_name,article_name):
-    """
-    Find the specific data from the collection
-    """
-
-    db = mongo_client[db_name]
-    collection = db[collection_name]
-
-    if collection is not None:
-        # Retrieve all documents in the collection
-        page_data = collection.find_one(article_name)
+    if page_data is None:
+        return "Page data is missing or invalid."
     
     return page_data
 
 
+print(dummy())
 
-print(get_article_data(db_name[1],collections[0],article_name))

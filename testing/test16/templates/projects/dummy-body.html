@@ -1,0 +1,29 @@
+<body class="background-color-body">
+    <div class="container main-container-color shadow-lg">
+        <!-- the container is the start of the container  that has boxes inside it -->
+        {% for article in articles %}
+        {% if article.title %}
+        {% include 'reusable/card-heading.html' with title=article.title %}
+        {% endif %}
+
+        {% if article.image %}
+        {% include 'reusable/article-image.html' with image=article.image %}
+        {% endif %}
+
+        {% if article.article_para %}
+        {% include 'reusable/article-desc.html' with article_para=article.article_para %}
+        {% endif %}
+
+        {% if article.markdown_data %}
+        {% include 'reusable/markdown-block.html' with markdown_data=article.markdown_data %}
+        {% endif %}
+        {% endfor %}
+
+        {% include 'reusable/cards-display.html' %}
+
+        <!--------------------The end of one card  ---------------->
+
+        {% include 'reusable/more.html' %}
+
+    </div>
+</body>
