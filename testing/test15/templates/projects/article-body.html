@@ -26,22 +26,7 @@
     {% endif %}
 
     
-    {% set markdown_data = "## Project Description 
-
-    Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches. The unpatching tool takes those patches and combines them back together to make the final image. 
-    
-    ## Installation 
-    
-    ```python
-    poetry build 
-    poetry install patching_unpatching-1.0-py3-none-any.whl
-    ```
-    ## To use 
-    ```python
-    from patching_unpatching.patching_unpatching import patching_input, unpatching
-    ```
-    
-    " %}
+    {% set markdown_data = "## Project Description" %}
     {% if markdown_data %}
     {% include 'reusable/markdown-block.html' %}
     {% endif %}
