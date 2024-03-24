@@ -54,20 +54,7 @@ def dummy(article_name):
 
     page_data = {"articles_json": data}
 
-    return render_template('projects/dummy.html', **page_data)
-
-
-
-
-
-"""
-@app.route('/projects/<article_name>')
-def article_first(article_name):
-
-    page_data = get_article_data(db_name[0],collections[0],{'article_name': article_name})
-
     return render_template('projects/article.html', **page_data)
-"""
 
 
 
