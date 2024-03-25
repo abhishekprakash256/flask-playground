@@ -87,9 +87,9 @@ def dummy():
         "image_url_card_two": "..\\static\\images\\misc\\cards.jpg",
         "card_three_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
         "image_url_card_three": "..\\static\\images\\misc\\cards.jpg",
-        "first_social_media_url" : "https://www.google.com",
+        "first_social_media_url" : "https://github.com/abhishekprakash256/Patching-Unpatching-Tool",
         "second_social_media_url" : "",
-        "button_link":"https://www.google.com"
+        "button_link":"https://www.meabhi.me"
 
     }
 

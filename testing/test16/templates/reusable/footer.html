@@ -8,6 +8,19 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+       /* Custom button color */
+    .button-custom-color {
+      background-color: #19A7CE;
+      border-color: #19A7CE;
+      color:#ffffff
+  }
+
+    .button-custom-color:hover {
+    background-color: #0D87B0;
+    border-color: #0D87B0;
+    color: #fefefe; /* Font color on hover */
+}
 </style>
 
 <!------------------the contact me box ----------------->
@@ -35,7 +48,7 @@
         <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
       </div>
       <div id="successMessage" class="submit-success-message" style="display: none;">Message sent successfully!</div>
-      <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+      <button type="submit" class="btn button-custom-color" id="submitButton">Submit</button>
     </form>
   </div>
   <div class="col"></div>

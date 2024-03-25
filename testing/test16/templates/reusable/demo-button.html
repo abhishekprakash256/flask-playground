@@ -1,8 +1,25 @@
 <div class = "row p-3" >
+    <style>
+        /* Custom button color */
+        .button-custom-color {
+            background-color: #19A7CE;
+            border-color: #19A7CE;
+            color:#ffffff
+        }
+
+        .button-custom-color:hover {
+        background-color: #0D87B0;
+        border-color: #0D87B0;
+        color: #fefefe; /* Font color on hover */
+    }
+    
+        /* Custom button color on hover */
+
+    </style>
     
     <div class="col text-center background-color-body rounded p-2">
         
-        <a class="btn btn-primary " href="{{ button_link }}" role="button">Demo</a>
+        <a class="btn button-custom-color" href="{{ button_link }}" role="button">Demo</a>
         
     </div>
   </div>
