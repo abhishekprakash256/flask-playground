@@ -31,6 +31,15 @@
         {% endfor %}
 
 
+        {% set first_social_media_url = articles_json['first_social_media_url'] %}
+        {% set second_social_media_url = articles_json['second_social_media_url'] %}
+        {% set third_social_media_url = articles_json['third_social_media_url'] %}
+        {% set four_social_media_url = articles_json['four_social_media_url'] %}
+        {% include 'reusable/article-social-media-links.html' %}
+
+        {% include 'reusable/demo-button.html' %}
+
+
         {% set card_one_text= articles_json['card_one_text'] %}
         {% set image_url_card_one= articles_json['image_url_card_one'] %}
         {% set card_first_url= articles_json['card_first_url'] %}
@@ -43,14 +52,6 @@
 
         
         {% include 'reusable/cards-display.html' %}
-
-
-        {% set first_social_media_url = articles_json['first_social_media_url'] %}
-        {% set second_social_media_url = articles_json['second_social_media_url'] %}
-        {% set third_social_media_url = articles_json['third_social_media_url'] %}
-        {% set four_social_media_url = articles_json['four_social_media_url'] %}
-        {% include 'reusable/article-social-media-links.html' %}
-
 
         <!--------------------The end of one card  ---------------->
 
