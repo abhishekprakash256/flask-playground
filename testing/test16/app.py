@@ -35,7 +35,7 @@ def about():
     return render_template('about.html')
 
 
-
+"""
 @app.route('/<section_name>')
 def section(section_name):
 
@@ -55,7 +55,7 @@ def article(article_name):
     page_data = {"articles_json": data}
 
     return render_template('projects/article.html', **page_data)
-
+"""
 
 @app.route('/dummy')
 def dummy():
@@ -86,7 +86,10 @@ def dummy():
         "card_two_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
         "image_url_card_two": "..\\static\\images\\misc\\cards.jpg",
         "card_three_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_three": "..\\static\\images\\misc\\cards.jpg"
+        "image_url_card_three": "..\\static\\images\\misc\\cards.jpg",
+        "first_social_media_url" : "https://www.google.com",
+        "second_social_media_url" : "https://www.meabhi.me"
+
     }
 
     page_data = {"articles_json": articles_json}

@@ -44,7 +44,13 @@
         
         {% include 'reusable/cards-display.html' %}
 
-        {% include 'reusable/article-links.html' %}
+
+        {% set first_social_media_url = articles_json['first_social_media_url'] %}
+        {% set second_social_media_url = articles_json['second_social_media_url'] %}
+        {% set third_social_media_url = articles_json['third_social_media_url'] %}
+        {% set four_social_media_url = articles_json['four_social_media_url'] %}
+        {% include 'reusable/article-social-media-links.html' %}
+
 
         <!--------------------The end of one card  ---------------->
 
