@@ -47,7 +47,7 @@ def section(section_name):
 
 
 @app.route('/projects/<article_name>')
-def dummy(article_name):
+def article(article_name):
 
 
     data = get_article_data(db_name[0],collections[0],{'article_name': article_name}) 
@@ -55,6 +55,38 @@ def dummy(article_name):
     page_data = {"articles_json": data}
 
     return render_template('projects/article.html', **page_data)
+
+
+@app.route('/dummy')
+def dummy():
+    articles_json = {
+        "article_name": "patching-unpatching",
+        "aticle_data": [
+            
+            {"title": "Patching Unpatching Open Source tool", "image_src": "..\\static\\images\\projects\\patching-unpatching\\patching.png", "article_para": "", "markdown_data": ""},
+            {"title": "Project Description", "image_src": "", "article_para": "", "markdown_data": ""},
+            {"title": "", "image_src": "", "article_para": "Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches. The unpatching tool takes those patches and combines them back together to make the final image.", "markdown_data": ""},
+            {"title": "", "image_src": "", "article_para": "", "markdown_data": "### Patching Tool"},
+            {"title": "", "image_src": "", "article_para": "Patching is the initial step in the image processing pipeline, responsible for dividing the input image into smaller, manageable sections called patches. These patches are typically square-shaped and can vary in size based on user-defined parameters such as patch size and padding.", "markdown_data": "### Patching Tool"},
+            {"title": "", "image_src": "", "article_para": "", "markdown_data": "**Key Features:**\n1. **Segmentation:** The patching tool effectively segments the input image, breaking it down into discrete patches. This segmentation enables localized analysis and processing, facilitating tasks such as feature extraction and object detection.\n2. **Padding Options:** To ensure consistency and accuracy during patch extraction, the patching tool offers padding options such as reflective padding. This padding technique extends the borders of the image by replicating pixel values, thereby maintaining continuity across patch boundaries.\n3. **Support for Multiple Image Types:** Whether dealing with grayscale (single-channel) or color (three-channel) images, the patching tool accommodates diverse image types. This flexibility extends its utility across various applications, from medical imaging to satellite imagery analysis.\n4. **Parameter Customization:** Users have the flexibility to customize parameters such as patch size and padding width to suit specific requirements. Fine-tuning these parameters enables optimization for different image characteristics and processing objectives."},
+            {"title": "", "image_src": "", "article_para": "", "markdown_data": "### Patching Tool"},
+
+        
+        ],
+        "card_one_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "image_url_card_one": "..\\static\\images\\misc\\cards.jpg",
+        "card_first_url": "https://www.meabhi.me",
+        "card_two_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "image_url_card_two": "..\\static\\images\\misc\\cards.jpg",
+        "card_three_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "image_url_card_three": "..\\static\\images\\misc\\cards.jpg"
+    }
+
+    page_data = {"articles_json": articles_json}
+
+    return render_template('projects/article.html', **page_data)
+
+
 
 
 
