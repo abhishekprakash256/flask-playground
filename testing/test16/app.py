@@ -35,7 +35,6 @@ def about():
     return render_template('about.html')
 
 
-
 @app.route('/<section_name>')
 def section(section_name):
 
