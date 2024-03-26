@@ -35,7 +35,7 @@ def about():
     return render_template('about.html')
 
 
-"""
+
 @app.route('/<section_name>')
 def section(section_name):
 
@@ -45,7 +45,7 @@ def section(section_name):
 
     return render_template('section.html',**page_data)
 
-
+"""
 @app.route('/projects/<article_name>')
 def article(article_name):
 
@@ -57,8 +57,8 @@ def article(article_name):
     return render_template('projects/article.html', **page_data)
 """
 
-@app.route('/dummy')
-def dummy():
+@app.route('/projects/<article_name>')
+def dummy(article_name):
     articles_json = {
         "article_name": "patching-unpatching",
         "aticle_data": [
@@ -82,20 +82,23 @@ def dummy():
         ],
         "card_one_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
         "image_url_card_one": "..\\static\\images\\misc\\cards.jpg",
-        "card_first_url": "https://www.meabhi.me",
+        "card_first_url": "#",
         "card_two_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
         "image_url_card_two": "..\\static\\images\\misc\\cards.jpg",
         "card_three_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
         "image_url_card_three": "..\\static\\images\\misc\\cards.jpg",
         "first_social_media_url" : "https://github.com/abhishekprakash256/Patching-Unpatching-Tool",
         "second_social_media_url" : "",
-        "button_link":"https://www.meabhi.me"
+        "button_link":"#"
 
     }
 
-    page_data = {"articles_json": articles_json}
+    #page_data = {"articles_json": articles_json}
 
-    return render_template('projects/article.html', **page_data)
+    data = get_article_data(db_name[0],collections[0],{'article_name': article_name}) 
+    page_data2 = {"articles_json": data}
+
+    return render_template('projects/article.html', **page_data2)
 
 
 
