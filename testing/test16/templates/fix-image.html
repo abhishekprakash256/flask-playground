@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Viewer</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    #image-container {
+        width: 80%; /* Adjust the width as per your preference */
+        height: 60vh; /* Fixed height, adjust as per your preference */
+        background-color: #ccc; /* Background color to fill empty space */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    #image-container img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+</style>
+</head>
+<body>
+<div id="image-container">
+    <img id="viewer-image" src="..\\static\\images\\projects\\patching-unpatching\\patching.png" alt="Image Viewer">
+</div>
+
+<div id="image-container">
+    <img id="viewer-image" src="..\\static\\images\\misc\\cards.jpg" alt="Image Viewer">
+</div>
+
+
+</body>
+</html>
