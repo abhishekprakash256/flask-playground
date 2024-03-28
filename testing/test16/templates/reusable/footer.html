@@ -47,7 +47,7 @@
         <label for="message">Message</label>
         <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
       </div>
-      <div id="successMessage" class="submit-success-message" style="display: none;">Message sent successfully!</div>
+      <div id="successMessageSubmit" class="submit-success-message" style="display: none;">Message sent successfully!</div>
       <button type="submit" class="btn button-custom-color" id="submitButton">Submit</button>
     </form>
   </div>
@@ -76,7 +76,7 @@
     // Here, you can implement your logic to actually submit the form data
     
     // Display success message
-    document.getElementById("successMessage").style.display = "block";
+    document.getElementById("successMessageSubmit").style.display = "block";
     
     // Disable the submit button after submission
     document.getElementById("submitButton").disabled = true;
