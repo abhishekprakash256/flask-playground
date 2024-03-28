@@ -25,8 +25,8 @@
 
 <script>
     document.getElementById("demoButton").addEventListener("click", function(event) {
-        // Check if button_link attribute is not present
-        if (!this.hasAttribute("href")) {
+        // Check if href attribute is set to "#"
+        if (this.getAttribute("href") === "#") {
             event.preventDefault(); // Prevent the default link behavior
 
             // Simulate form submission process
