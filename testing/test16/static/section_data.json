@@ -46,7 +46,7 @@
     "section_name": "project",
     "title":"Project",
     "card_one_texts": [
-        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Patching and Unpatching are a set of tools that are used for image processing. The patching ..",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
@@ -58,7 +58,7 @@
     ],
 
     "image_urls_card_one": [
-        "../static/images/misc/cards.jpg",
+        "..\\static\\images\\projects\\patching-unpatching\\patching.png",
          "../static/images/misc/cards.jpg",
           "../static/images/misc/cards.jpg",
            "../static/images/misc/cards.jpg",
@@ -70,7 +70,7 @@
     ],
 
             "card_first_urls": [
-        "../static/images/misc/cards.jpg",
+        "/projects/patching-unpatching",
          "../static/images/misc/cards.jpg",
           "../static/images/misc/cards.jpg",
            "../static/images/misc/cards.jpg",
@@ -84,7 +84,7 @@
 
 
 
-    "more_link": "..\\static\\images\\misc\\cards.jpg"
+    "more_link": "#"
 }
 ,
 {
