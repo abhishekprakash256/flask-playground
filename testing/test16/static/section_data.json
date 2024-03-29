@@ -47,7 +47,7 @@
     "title":"Project",
     "card_one_texts": [
         "Patching and Unpatching are a set of tools that are used for image processing. The patching ..",
-        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Federated Learning is paradigm that covers the decentralized learning of the model on the ..",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
@@ -59,7 +59,7 @@
 
     "image_urls_card_one": [
         "..\\static\\images\\projects\\patching-unpatching\\patching.png",
-         "../static/images/misc/cards.jpg",
+         "..\\static\\images\\projects\\federated-learning\\federated-learning-flow.png",
           "../static/images/misc/cards.jpg",
            "../static/images/misc/cards.jpg",
             "../static/images/misc/cards.jpg",
@@ -71,7 +71,7 @@
 
             "card_first_urls": [
         "/projects/patching-unpatching",
-         "../static/images/misc/cards.jpg",
+         "/projects/federated-learning",
           "../static/images/misc/cards.jpg",
            "../static/images/misc/cards.jpg",
             "../static/images/misc/cards.jpg",
