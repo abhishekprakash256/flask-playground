@@ -17,7 +17,7 @@ import json
 db_name = ["articles","section"]
 
 #collection names in database 
-collections = ["projects","section_data"]
+collections = ["projects","section_data","tech"]
 
 
 app = Flask(__name__)
@@ -56,6 +56,15 @@ def projects(article_name):
     return render_template('projects/article.html', **page_data2)
 
 
+@app.route('/tech/<article_name>')
+def tech(article_name):
+
+    #page_data = {"articles_json": articles_json}
+
+    data = get_article_data(db_name[0],collections[1],{'article_name': article_name}) 
+    page_data2 = {"articles_json": data}
+
+    return render_template('projects/article.html', **page_data2)
 
 
 
