@@ -38,7 +38,7 @@ def about():
 @app.route('/<section_name>')
 def section(section_name):
 
-    page_data = get_article_data(db_name[1],collections[1],{'section_name': section_name})
+    page_data = get_article_data(db_name[1],collections[3],{'section_name': section_name})
 
     print(page_data)
 
