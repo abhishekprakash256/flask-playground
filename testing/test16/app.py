@@ -17,7 +17,7 @@ import json
 db_name = ["articles","section"]
 
 #collection names in database 
-collections = ["projects","section_data","tech"]
+collections = ["projects","tech","life","section_data"]
 
 
 app = Flask(__name__)
