@@ -67,6 +67,23 @@ def tech(article_name):
     return render_template('projects/article.html', **page_data2)
 
 
+#store the data in the json file
+def store_form_data(name, email, message):
+    # Create a dictionary with the form data
+    form_data = {
+        'name': name,
+        'email': email,
+        'message': message
+    }
+    
+    # Open the JSON file in append mode
+    with open('form_data.json', 'a') as file:
+        # Write the form data to the file
+        json.dump(form_data, file)
+        file.write('\n')  # Add a new line for each entry
+    print("Form data saved to JSON file successfully")
+
+
 
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
@@ -75,18 +92,10 @@ def submit_form():
     email = request.form.get('email')
     message = request.form.get('message')
 
-    #printh the data 
-    print(name)
-    print(email)
-    print(message)
-    
-    # Here you can add code to save the form data to your database or perform any other required actions
-    
-    # Return a JSON response indicating success
-    return jsonify({'success': True, 'message': 'Form data submitted successfully'})
+    #the data stored in the json file 
+    store_form_data(name, email, message)
 
+    return jsonify({'success': True, 'message': 'Form data submitted successfully'})
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-    print(submit_form())
