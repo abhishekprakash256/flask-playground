@@ -103,7 +103,7 @@
     ],
 
     "image_urls_card_one": [
-        "/tech/system-design",
+        "..\\static\\images\\tech\\system-design.png",
          "../static/images/misc/cards.jpg",
           "../static/images/misc/cards.jpg",
            "../static/images/misc/cards.jpg",
@@ -115,7 +115,7 @@
     ],
 
             "card_first_urls": [
-        "../static/images/misc/cards.jpg",
+        "/tech/system-design",
          "../static/images/misc/cards.jpg",
           "../static/images/misc/cards.jpg",
            "../static/images/misc/cards.jpg",
