@@ -4,7 +4,7 @@ make the main app for the website
 """
 #imports
 import json
-from flask import Flask, render_template,abort
+from flask import Flask, render_template, request, jsonify
 
 from read_data_mongo import get_article_data
 
@@ -68,6 +68,25 @@ def tech(article_name):
 
 
 
+@app.route('/submit_form', methods=['POST'])
+def submit_form():
+    # Retrieve form data
+    name = request.form.get('name')
+    email = request.form.get('email')
+    message = request.form.get('message')
+
+    #printh the data 
+    print(name)
+    print(email)
+    print(message)
+    
+    # Here you can add code to save the form data to your database or perform any other required actions
+    
+    # Return a JSON response indicating success
+    return jsonify({'success': True, 'message': 'Form data submitted successfully'})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    print(submit_form())
