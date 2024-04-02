@@ -229,6 +229,28 @@ class Helper_fun():
         
         else:
             print("Update failed")
+
+    def delete_db(self,db_name):
+        """
+        The function to delete the database
+        """
+        db = mongo_client[db_name]
+        
+        #drop the database
+        mongo_client.drop_database(db_name)
+
+        print("The database has been deleted")
+
+    def delete_data_all(self,db_name,collection_name):
+        """
+        The funciton to delete all the data inside a collection
+        """
+        pass
+
+
+    
+
+
     
 
         
