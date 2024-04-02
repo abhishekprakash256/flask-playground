@@ -91,7 +91,7 @@
     "section_name": "tech",
     "title":"Tech",
     "card_one_texts": [
-        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "System design a multidisciplinary field that encompasses various aspects of designing ....",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
@@ -103,7 +103,7 @@
     ],
 
     "image_urls_card_one": [
-        "../static/images/misc/cards.jpg",
+        "/tech/system-design",
          "../static/images/misc/cards.jpg",
           "../static/images/misc/cards.jpg",
            "../static/images/misc/cards.jpg",
