@@ -55,6 +55,11 @@ def projects(article_name):
 
     return render_template('projects/article.html', **page_data2)
 
+#test demo for website 
+@app.route('/demo')
+def project_demo():
+    return render_template('exp.html')
+
 
 @app.route('/tech/<article_name>')
 def tech(article_name):
