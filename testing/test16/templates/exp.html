@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render 15 Words</title>
+</head>
+<body>
+    <p>
+        Dynamic programming is a programming paradigm that can be used in problems which can be subdivided into smaller problems to get to the final solution. These
+    </p>
+    <script>
+        // Get the text content
+        var text = document.querySelector('p').textContent;
+        
+        // Split the text into an array of words
+        var words = text.split(' ');
+        
+        // Get the first 15 words
+        var first15Words = words.slice(0, 18).join(' ');
+        
+        // Replace the paragraph content with the first 15 words
+        document.querySelector('p').textContent = first15Words;
+    </script>
+</body>
+</html>
