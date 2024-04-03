@@ -92,7 +92,7 @@
     "title":"Tech",
     "card_one_texts": [
         "System design a multidisciplinary field that encompasses various aspects of designing ....",
-        "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "Dynamic programming is a programming paradigm that can be used in problems which can ..",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
         "Some quick example text to build on the card title and make up the bulk of the card's content",
@@ -104,7 +104,7 @@
 
     "image_urls_card_one": [
         "..\\static\\images\\tech\\system-design.png",
-         "../static/images/misc/cards.jpg",
+         "..\\static\\images\\tech\\dynamic-programming.jpg",
           "../static/images/misc/cards.jpg",
            "../static/images/misc/cards.jpg",
             "../static/images/misc/cards.jpg",
@@ -116,7 +116,7 @@
 
             "card_first_urls": [
         "/tech/system-design",
-         "../static/images/misc/cards.jpg",
+         "/tech/dynamic-programming",
           "../static/images/misc/cards.jpg",
            "../static/images/misc/cards.jpg",
             "../static/images/misc/cards.jpg",
