@@ -68,3 +68,51 @@
         <!-----card ends----->
     </div>
 </div>
+
+<style>
+    .card-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+</style>
+<script>
+    // Get all card-text elements
+    var paragraphs = document.querySelectorAll('.card-text');
+    
+    // Iterate over each paragraph
+    paragraphs.forEach(function(paragraph) {
+        // Wrap the paragraph content inside a span
+        var span = document.createElement('span');
+        span.textContent = paragraph.textContent;
+        paragraph.textContent = '';
+        paragraph.appendChild(span);
+
+        // Get the text content of the current paragraph
+        var text = span.textContent;
+
+        // Split the text into an array of words
+        var words = text.split(' ');
+
+        // Get the first 10 words
+        var first10Words = words.slice(0, 10).join(' ');
+
+        // Replace the paragraph content with the first 10 words
+        span.textContent = first10Words;
+
+        // Set a fixed height for the span
+        span.style.display = 'block';
+        span.style.height = '3.6em'; // Adjust the height as needed
+        span.style.overflow = 'hidden';
+
+        // Make the link clickable
+        var link = paragraph.querySelector('a');
+        link.style.pointerEvents = 'auto';
+    });
+</script>
+
+
+
+
