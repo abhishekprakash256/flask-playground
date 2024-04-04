@@ -1,4 +1,5 @@
 
+
 [
     {
         "article_name": "system-design",
@@ -68,9 +69,37 @@
         "button_link": "",
         "more_link":"/tech"
     
+         },
+
+    {
+        "article_name": "image-processing",
+        "aticle_data": [
+            
+        
+            {"title": "Image Processsing", "image_src": "..\\static\\images\\tech\\image-processing.jpg", "article_para": "Image processing is a technique used by machines to understand data in a flat block of arrays, which can range from multi-dimensional arrays to few-dimensional arrays.", "markdown_data": "Let's delve into the basics of image processing. Computers lack the ability to see the world as humans do. Thus, we employ techniques to enable computers to perceive the world in their own language, primarily consisting of numbers. To a computer, an image is essentially a combination of numbers arranged to form a pattern. Colors are represented as numbers in overlapping arrays.\n\nA fundamental example is the black and white image, constructed by basic building blocks called pixels, analogous to cells in our bodies. Pixel color variation gives an image its color. In a black and white image, the range of pixel color is from 0 to 255, where 0 represents pure black and 255 represents pure white. There are shades between these extremes, ranging from lighter to darker shades. Pixels are stored in a matrix, which can be two-dimensional or n-dimensional depending on the color spectrum of the image. Computers read this array and extract image information based on the assigned pixel number.\n\nIn a black and white image, a 5x5 array with each pixel's value as 255 indicates a white image; conversely, if the pixels are 0, it represents a black image. The scenario changes when dealing with color images, where machines create colors using a mixture of three primary colors: red, blue, and green. The shades of red, blue, and green can be adjusted as the image's color varies.\n\nColor images are represented as a combination of 3-dimensional arrays, with each array representing red, blue, and green shades. The values range from 0 to 255, allowing for a total of 256 shades. Therefore, for each pixel in an RGB image:\n\n- The red component can vary from 0 (no red) to 255 (maximum red).\n- The green component can vary from 0 (no green) to 255 (maximum green).\n- The blue component can vary from 0 (no blue) to 255 (maximum blue).\n\nCombining these three color components in different proportions produces a wide range of colors. For example, pure red would have an RGB value of (255, 0, 0), pure green would have an RGB value of (0, 255, 0), and pure blue would have an RGB value of (0, 0, 255). White is represented as (255, 255, 255), and black is represented as (0, 0, 0).\n\nAs images are stored in computer systems, we can manipulate the numbers to manipulate the image. Thus, we can enhance images by adjusting brightness, contrast, enlarging them, and more."},
+            
+            {"title": "", "image_src": "", "article_para": "", "markdown_data": "### Applications of Image Processing\n\n1. **Image Filtering**: Enhances or modifies images through operations like blurring, sharpening, edge detection, and noise reduction.\n2. **Image Enhancement**: Improves visual quality by adjusting brightness, contrast, histogram equalization, etc.\n3. **Image Segmentation**: Divides images into meaningful regions or objects for tasks like object detection and medical image analysis.\n4. **Feature Extraction**: Identifies and extracts relevant information or features from images.\n5. **Object Detection and Recognition**: Locates and identifies objects within images using techniques ranging from traditional methods to deep learning.\n6. **Image Classification**: Assigns labels or categories to images based on their content.\n7. **Image Restoration**: Recovers original images from degraded versions, removing noise, blurring, etc.\n8. **Medical Image Processing**: Analyzes images from medical imaging modalities for diagnosis and treatment planning.\n9. **Remote Sensing and Satellite Image Processing**: Analyzes aerial or satellite imagery for tasks like land cover classification and environmental assessment.\n10. **Geometric Image Transformation**: Applies operations like rotation, scaling, and warping for image alignment and correction.\n11. **Image Compression**: Reduces storage size or transmission bandwidth while preserving image quality.\n\nThese applications illustrate the diverse range of topics within image processing, which intersects with computer vision, signal processing, machine learning, and various industries such as healthcare, agriculture, and entertainment."}
+ 
+            
+    
+        ],
+        "card_one_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "image_url_card_one": "..\\static\\images\\misc\\cards.jpg",
+        "card_first_url": "#",
+    
+        "card_two_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "image_url_card_two": "..\\static\\images\\misc\\cards.jpg",
+    
+        "card_three_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
+        "image_url_card_three": "..\\static\\images\\misc\\cards.jpg",
+        "first_social_media_url" : "",
+        
+        "second_social_media_url" : "",
+        "button_link": "",
+        "more_link":"/tech"
+    
          }
 
     
     ]
-    
     
