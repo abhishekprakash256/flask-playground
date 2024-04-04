@@ -32,7 +32,8 @@
         "first_social_media_url" : "https://github.com/abhishekprakash256/Patching-Unpatching-Tool",
         
         "second_social_media_url" : "",
-        "button_link":"#"
+        "button_link":"#",
+        "more_link":"/project"
     
          }
         ,
@@ -67,7 +68,8 @@
             "first_social_media_url" : "https://github.com/abhishekprakash256/Federated-Avearge-On-MNIST",
         
             "second_social_media_url" : "",
-            "button_link":"#"
+            "button_link":"#",
+            "more_link":"/project"
         
         
         
@@ -108,7 +110,8 @@
             "first_social_media_url" : "https://github.com/abhishekprakash256/Neural-Style-Transfer/tree/main",
         
             "second_social_media_url" : "",
-            "button_link":"#"
+            "button_link":"#",
+            "more_link":"/project"
         }
         
     

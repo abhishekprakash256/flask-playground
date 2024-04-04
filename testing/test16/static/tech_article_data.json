@@ -35,7 +35,8 @@
         "first_social_media_url" : "",
         
         "second_social_media_url" : "",
-        "button_link": ""
+        "button_link": "",
+        "more_link":"/tech"
     
          }
         ,
@@ -64,7 +65,8 @@
         "first_social_media_url" : "",
         
         "second_social_media_url" : "",
-        "button_link": ""
+        "button_link": "",
+        "more_link":"/tech"
     
          }
 
