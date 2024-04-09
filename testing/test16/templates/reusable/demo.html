@@ -21,7 +21,6 @@
     </style>
 </head>
 <body>
-    <h1>{{ project_name }}</h1>
     <iframe src="{{ url_for('static', filename=data['project_urls'].get(project_name, '')) }}"></iframe>
 </body>
 </html>
