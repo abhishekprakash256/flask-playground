@@ -4,6 +4,7 @@ make the main app for the website
 """
 #imports
 import json
+import os 
 from flask import Flask, render_template, request, jsonify
 
 from read_data_mongo import get_article_data
@@ -57,7 +58,7 @@ def projects(article_name):
 
 
 
-#test data
+#the demo route for projects
 @app.route('/demo/<project_name>')
 def project_demo(project_name):
     # Define nested data dictionary with project names as keys
@@ -96,12 +97,21 @@ def store_form_data(name, email, message):
         'message': message
     }
     
-    # Open the JSON file in append mode
-    with open('form_data.json', 'a') as file:
-        # Write the form data to the file
-        json.dump(form_data, file)
-        file.write('\n')  # Add a new line for each entry
-    print("Form data saved to JSON file successfully")
+    # Append the form data to a list or create a new list if the file doesn't exist
+    form_data_list = []
+    if os.path.exists('form_data.json'):
+        with open('form_data.json', 'r') as list_file:
+            try:
+                form_data_list = json.load(list_file)
+            except json.decoder.JSONDecodeError:
+                pass
+    
+    form_data_list.append(form_data)
+    
+    # Write the list to the JSON file
+    with open('form_data.json', 'w') as list_file:
+        json.dump(form_data_list, list_file, indent=4)
+    print("Form data saved to list in JSON file successfully")
 
 
 
