@@ -116,7 +116,6 @@ def store_form_data(name, email, message):
 
 
 
-
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
     # Retrieve form data
