@@ -55,10 +55,23 @@ def projects(article_name):
 
     return render_template('projects/article.html', **page_data2)
 
-#test demo for website 
-@app.route('/demo')
-def project_demo():
-    return render_template('demo.html')
+
+
+#test data
+@app.route('/demo/<project_name>')
+def project_demo(project_name):
+    # Define nested data dictionary with project names as keys
+    demo_data = {
+        'project_urls': {
+            'academic-website': "projects/Academic-Website/index.html",
+            'another-project': "projects/Another-Project/index.html",
+            # Add more projects and their URLs as needed
+        }
+    }
+    return render_template('reusable/demo.html', project_name= project_name, data=demo_data)
+
+
+
 
 
 @app.route('/tech/<article_name>')
@@ -70,6 +83,8 @@ def tech(article_name):
     page_data2 = {"articles_json": data}
 
     return render_template('projects/article.html', **page_data2)
+
+
 
 
 #store the data in the json file
@@ -90,6 +105,8 @@ def store_form_data(name, email, message):
 
 
 
+
+
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
     # Retrieve form data
@@ -101,6 +118,12 @@ def submit_form():
     store_form_data(name, email, message)
 
     return jsonify({'success': True, 'message': 'Form data submitted successfully'})
+
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

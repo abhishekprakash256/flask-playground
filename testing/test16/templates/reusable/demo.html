@@ -1,4 +1,4 @@
-<!--- this is test file not for live usage -->
+<!--- the file render the html page ----->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +21,8 @@
     </style>
 </head>
 <body>
-    <iframe src="{{ url_for('static', filename='projects/Academic-Website/index.html') }}"></iframe>
+    <h1>{{ project_name }}</h1>
+    <iframe src="{{ url_for('static', filename=data['project_urls'].get(project_name, '')) }}"></iframe>
 </body>
 </html>
+
