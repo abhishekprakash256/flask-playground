@@ -36,7 +36,20 @@ static (The static files of the website are here )
     - route_template_map (not being used right now )
     - section_data (The section data from the section page with tech , life and proeject for card stucture)
     - tech_article_data ( The tech data of the articles )
+    - style ( The css file for webiste )
 
+templates (the templates of the sites that render in the front end)
+    - base ( the base template for the staring templates has the cdm links and  file links)
+    - components ( the pages are different section of the website that can be designed one for particular pages as per name explanamable)
+    - projects ( The arrtice page to display the articles )
+        - article-body (the body section that has heading, image, para , markdown )
+        - article ( the artcile rendering file )
+        - extra file ( the dummy files to test )
+    - reusable ( the reusable components of the webiste template )
+    - about ( the about page)
+    - index ( the index page )
+    - section ( the section display page ) find the diff in the two
+    - showcase ( the showcase page )
 
 ```
 
