@@ -49,9 +49,19 @@ templates (the templates of the sites that render in the front end)
     - about ( the about page)
     - index ( the index page )
     - section ( the section display page ) find the diff in the two
-    - showcase ( the showcase page )
+    - showcase ( the showcase page ) might not be in use anymore, check the live version now 
 
+app ( the main flask file for runner and making end points)
+
+exp ( an experiment file can be changed anytime as per needed )
+
+form_data (the file to store the data from the message fields)
+
+read_data_mongo (read the data from the mongo and fetch it for render )
 ```
+
+
+
 
 
 
