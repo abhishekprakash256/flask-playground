@@ -60,7 +60,59 @@ form_data (the file to store the data from the message fields)
 read_data_mongo (read the data from the mongo and fetch it for render )
 ```
 
+## The commands to use (mostle linux based)
 
+
+
+### The nginx command 
+
+```
+
+sudo apt update
+sudo apt install nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+sudo nginx -t
+sudo systemctl reload nginx
+
+```
+
+### The mongo commands
+
+```
+mongosh 
+use your_database_name
+show collections
+db.dropDatabase()  #delete the dropDatabase
+db.<collection_name>.drop()  #drop the 
+db.my_collection.find() #show all the data in collection
+```
+
+### cert bot commands 
+
+```
+sudo yum install certbot python3-certbot-nginx
+sudo certbot --nginx -d meabhi.me -d www.meabhi.me
+sudo certbot --nginx -d meabhi.me
+```
+
+### The Flask commands 
+
+```
+python3 app.py 
+
+to run on the server 
+flask run --host=0.0.0.0 --port=5000
+
+
+kil flask by 
+ps aux | grep flask
+kil pid
+
+run the flask in background 
+flask run --host=0.0.0.0 --port=5000 > output.log 2>&1 & disown
+```
 
 
 
