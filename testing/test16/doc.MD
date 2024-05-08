@@ -9,6 +9,7 @@ Flask
 mongodb 
 nginx 
 pymongo 
+aws ec2 (static ip)
 ```
 
 ### File structure : - 
@@ -18,7 +19,15 @@ mongo (the files that are used for the mongo data hnadling and insertion)
     - mongo_helper (the file connects the mongo client and the data and the has the methods to add , insert , update, delete and show in the database, the database )
     - read_data_json (the file is used to read the data from the json for the insertion in the mongodb)
     - data_handling (the data handling file is used to add and update the database as per requirement)
-    - bulk_data_handling ()
+    - bulk_data_insertion (The file is used for the addition of the data from the json file read it delete all and then write the lastest data , the problem is currently add the data by deletion of all rather than modifications)
+
+
+static (The static files of the website are here )
+    - images (all images as per sections of the website)
+        - icons (all icons)
+        - misc (the dummy images)
+        - profile (The profile pic)
+        - projects (The project images as )
 
 
 ```
