@@ -27,7 +27,15 @@ static (The static files of the website are here )
         - icons (all icons)
         - misc (the dummy images)
         - profile (The profile pic)
-        - projects (The project images as )
+        - projects (The project images are in the respective project folder)
+        - tech (The images for tech section of the website)
+    - Projects (The project section files)
+        - Academic-Webiste (The website project files)
+    - resume ( The current resume file )
+    - project_article_data (The project data of the articles )
+    - route_template_map (not being used right now )
+    - section_data (The section data from the section page with tech , life and proeject for card stucture)
+    - tech_article_data ( The tech data of the articles )
 
 
 ```
