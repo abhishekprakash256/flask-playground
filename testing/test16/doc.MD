@@ -115,8 +115,40 @@ flask run --host=0.0.0.0 --port=5000 > output.log 2>&1 & disown
 ```
 
 
+##  Nginx Configurations 
+
+The nginx configuration file is used to make the nginx connect to the certbot files , put the domain name as well. The file location - 
 
 
 
 
+```
 
+server {
+    listen 80;
+    server_name www.meabhi.me;
+
+    # Redirect HTTP to HTTPS
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name www.meabhi.me;
+
+    ssl_certificate /etc/letsencrypt/live/meabhi.me/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/meabhi.me/privkey.pem;
+
+    # Other SSL configuration directives (e.g., SSL protocols, ciphers, etc.)
+
+    location / {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+```
