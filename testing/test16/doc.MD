@@ -208,6 +208,7 @@ server {
     - font-color-class - is the blue color as the main container color but darker tone 
     - bio-color - the background color the darker grey in the background color 
     - bio-font - used for heading 
+    - arial-font - might not be used to check on that
     - 
 
 
