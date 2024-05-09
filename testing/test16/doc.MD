@@ -193,6 +193,15 @@ server {
 - store_from_data is used to store the data from the front end to the back end and jsonify it and store it in file form_data.json
 
 
+### The logics of the page 
+
+- Some the pages are static as the index page and the about page 
+- The mongosb plays the main role in the database storage and fetching the data is done from the mongodb 
+- most of the components of the page are resualble and data can be passed to them either through mongodb or manually 
+- The database has 2 database and 4 collections
+- the articles database has 3 collections tech, project and life
+- the section database has 1 collection section_data that stores the section data for section page with page can be tech,  life and project
+- 
 
 
 
