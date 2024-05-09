@@ -171,7 +171,14 @@ server {
 - The data is stored in forms of the documents 
 - Two data bases are made named "articles" and "section"
     - articles is the database to store the article data 
-    - 
+    - articles has 3 collection inside the database 
+    - "project" to store the project article data 
+    - "tech" to store the tech article data 
+    - "life" to store the life article data
+- The section database to store the section data 
+    - The collection "section_data" is used to store the section data 
+    - The "section_data" is stored with the data from life, project and tech page
+    
 
 
 
