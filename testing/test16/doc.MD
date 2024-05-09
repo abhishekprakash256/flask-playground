@@ -164,6 +164,16 @@ server {
 - The config file is in this link /etc/nginx/nginx.conf
 
 
+## Some common logic for website 
+
+### MongoDb (database)
+
+- The data is stored in forms of the documents 
+- Two data bases are made named "articles" and "section"
+    - articles is the database to store the article data 
+    - 
+
+
 
 
 
