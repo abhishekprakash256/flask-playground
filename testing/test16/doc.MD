@@ -178,7 +178,9 @@ server {
 - The section database to store the section data 
     - The collection "section_data" is used to store the section data 
     - The "section_data" is stored with the data from life, project and tech page
-    
+
+
+
 
 
 
