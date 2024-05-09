@@ -201,7 +201,14 @@ server {
 - The database has 2 database and 4 collections
 - the articles database has 3 collections tech, project and life
 - the section database has 1 collection section_data that stores the section data for section page with page can be tech,  life and project
-- 
+- Some small css and JS logic are defined on the page where the code is written for the page on the go 
+    - #### CSS classes 
+    - background-color-body - it's used for the body color that on the upper body and on components 
+    - main-container-color - the main container color is the blue color for the main components 
+    - font-color-class - is the blue color as the main container color but darker tone 
+    - bio-color - the background color the darker grey in the background color 
+    - bio-font - used for heading 
+    - 
 
 
 
