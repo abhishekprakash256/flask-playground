@@ -152,3 +152,35 @@ server {
 }
 
 ```
+
+
+### Hosting process 
+
+- Make a ec2 or t2 micor with ubunut any instance in AWS 
+- Assign the ip address 3.128.143.84 in the Ec2 instance. 
+- Assign the ip address in godaddy dns management pannel
+- The certbot certifiction is made for https 
+- Add the nginx config file that has the DNS and certification link 
+- The config file is in this link /etc/nginx/nginx.conf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Links 
+
+```
+https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts
+
+
+```
