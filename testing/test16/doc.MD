@@ -180,6 +180,26 @@ server {
     - The "section_data" is stored with the data from life, project and tech page
 
 
+### The App file (main flask file)
+
+- The main flask file is app.py that run the flask server 
+- The imports are from mongo to read the data from mongodb and help it render in the front end 
+- The db_name and collections is a list that have the names of the mongo database defined and the collections named defined as well 
+- static foler is passed as well 
+- the index and the about just render the data from the page nothing fetched from mongodb 
+- section function render the data from the mongdb as per page 
+- project and tech function works the same and just render the data from the database using the article.html and article_body.html
+- the project_demo works with rendering the demo website which are made and render the website files 
+- store_from_data is used to store the data from the front end to the back end and jsonify it and store it in file form_data.json
+
+
+
+
+
+
+
+
+
 
 
 
