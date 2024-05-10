@@ -31,7 +31,12 @@
 
 
 .background-color-body {
-  background-color: #F6F1F1; /* Replace #ff0000 with the color of your choice */
+  background-color: #ffffff; /* Replace #ff0000 with the color of your choice */
+}
+
+
+.footer-header-color {
+  background-color: #F1F6F9;
 }
 
 
@@ -53,9 +58,6 @@
 
 }
 
-.bio-color {
-  background-color: #B5C0D0;
-}
 
 .bio-font {
   font-family: 'Helvetica';

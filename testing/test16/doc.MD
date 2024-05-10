@@ -209,7 +209,15 @@ server {
     - bio-color - the background color the darker grey in the background color 
     - bio-font - used for heading 
     - arial-font - might not be used to check on that
-    - 
+    - ### The color design 
+    - The background color - #ffffff
+    - The blue body color - #19A7CE
+    - The font color blue - #146C94
+    - The container color is - #ffffff
+    - The footer header color is - #F1F6F9
+    - The icon color is - black
+
+
 
 
 
