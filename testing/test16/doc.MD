@@ -214,7 +214,7 @@ server {
     - The blue body color - #19A7CE
     - The font color blue - #146C94
     - The container color is - #ffffff
-    - The footer header color is - #F1F6F9
+    - The footer header color is - #e9ecef
     - The icon color is - black
 
 
