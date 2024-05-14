@@ -5,7 +5,7 @@ make the main app for the website
 #imports
 import json
 import os 
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 
 from read_data_mongo import get_article_data
 
@@ -131,6 +131,14 @@ def submit_form():
 
 
 
+
+#tiny url experiment for opening google with end point tinyurl
+
+@app.route("/tinyurl")
+def test():
+
+    # the url 
+    return redirect("https://www.google.com")
 
 
 
