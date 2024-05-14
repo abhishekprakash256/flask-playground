@@ -136,12 +136,21 @@ def submit_form():
 # the tiny url works for the google.com meabhi.me/tinyurl reidrects to www.google.com
 
 
+#the test case 
 @app.route("/tinyurl")
 def test():
 
     # the url 
     return redirect("https://www.google.com")
 
+
+#test for the case sensetivity
+#proven the url works and are case sensetive 
+@app.route("/tiNyurL")
+def test2():
+
+    # the url to test case sensetivity
+    return redirect("https://www.bing.com")
 
 
 
