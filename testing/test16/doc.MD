@@ -60,7 +60,23 @@ form_data (the file to store the data from the message fields)
 read_data_mongo (read the data from the mongo and fetch it for render )
 ```
 
-## The commands to use (mostle linux based)
+### Redis installation commands (Linux)
+
+```
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+
+sudo apt-get update
+sudo apt-get install redis
+
+
+#redis connector 
+pip install redis
+
+```
+
+## The commands to use (mostly linux based)
 
 
 

@@ -133,6 +133,8 @@ def submit_form():
 
 
 #tiny url experiment for opening google with end point tinyurl
+# the tiny url works for the google.com meabhi.me/tinyurl reidrects to www.google.com
+
 
 @app.route("/tinyurl")
 def test():

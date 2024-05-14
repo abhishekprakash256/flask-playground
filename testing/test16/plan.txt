@@ -1,0 +1,29 @@
+the tiny url maker 
+
+working --- 
+
+reqs -- 
+
+database - 
+    - redis for databse can be used 
+    - mongodb (a seperate db and a collection inside it)
+    - a hashing algorithm to make the url hash 
+        - no collision should be there 
+
+Front end - 
+    - a url maker (input field ) 
+    - give url (copy url)
+
+
+backend - 
+    - take the url convert to hash 
+    - and map the hash to url 
+    - use the function to map the hash to url 
+
+
+    
+
+
+
+
+make the front end to feed the value in database 
