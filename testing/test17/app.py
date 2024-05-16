@@ -6,8 +6,10 @@ make the main app for the website
 import json
 import os 
 from flask import Flask, render_template, request, jsonify, redirect
-
 from read_data_mongo import get_article_data
+from redis_fun.redis_helper import * 
+from generate_tiny_url import * 
+
 
 #for test 
 import json
@@ -19,6 +21,10 @@ db_name = ["articles","section"]
 
 #collection names in database 
 collections = ["projects","tech","life","section_data"]
+
+#redis database 
+
+
 
 
 app = Flask(__name__)
@@ -34,6 +40,11 @@ def home():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+
+
+
+
 
 
 @app.route('/<section_name>')
@@ -132,25 +143,17 @@ def submit_form():
 
 
 
-#tiny url experiment for opening google with end point tinyurl
-# the tiny url works for the google.com meabhi.me/tinyurl reidrects to www.google.com
+#the test case , the pieces are working correctly 
+#make the front end and add the value to backend 
+@app.route("/tu/<tiny_url>")
+def tiny_url_redirect(tiny_url):
 
+    #fetch the original value from redis
+    original_url = helper_fun.get_hash_value(tiny_url)
+    
 
-#the test case 
-@app.route("/tinyurl")
-def test():
+    return redirect("https://" + original_url)
 
-    # the url 
-    return redirect("https://www.google.com")
-
-
-#test for the case sensetivity
-#proven the url works and are case sensetive 
-@app.route("/tiNyurL")
-def test2():
-
-    # the url to test case sensetivity
-    return redirect("https://www.bing.com")
 
 
 
