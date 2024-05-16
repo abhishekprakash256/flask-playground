@@ -1,0 +1,109 @@
+Const -
+    url-hash  (hash for redis)
+    url-set  (set for redis)
+    PRE_GEN_HASH_NUM = 10 (set the number of pre generated hashes)
+
+Folder 
+    - redis (folder)
+        - redis_helper (file)
+            - check redis status (function)
+            - establish the client (function)
+            - helper_fun (class)
+                - add_value_to_set (method) -
+                - add_value_to_hash (method) -
+                - delete_db (method) -
+                - check_val_exist (method)
+                - pop_set_val - (method)
+                - get_hash_val (method) -
+                    """  
+                    Get the url value from the redis hashset
+                    return the orginal url to flask server
+                    """
+                - get_all_set_val (method)
+                  """
+                  get all the value from the set 
+                  """
+                - get_all_hash_val (method)
+                  """
+                  get all the value from the hash
+                  """
+
+    
+    - hashing (folder)
+        - make_hashes (file)
+            - generate_random_hash (function)
+    
+    - generate_tiny_url (file)
+        - check_redis_set (function)
+            """
+            check the len of the redis set and add value till
+            the len of the set is 10 
+            """
+        - generate_tiny_url_fun (function)
+            """
+            Pop the element from the redis set 
+            run check_redis_set
+            add the elemnet in the redis hash with url as per key and val
+            return the tiny url 
+            """
+
+
+
+front -end --
+
+    - input field 
+    - button to genrate the tiny url 
+    - output field to copy the url 
+
+    - api 
+        inp (orginal_url)
+        out (tiny_url)
+
+
+Flask server -- 
+
+    - tiny_url_redirect(tiny_url)
+      """
+      The function will redirect the tiny url to the main url 
+      """
+    
+    
+
+
+
+
+reqs -- 
+    redis connection maker
+    hashing generation functionlity
+    redis sets pushing the values 
+        - checking doens't exist in the redis hashes as well for keys 
+    generate the value and store in redis hashes and give out 
+    
+    
+
+
+API reqs -- 
+
+    generate_tiny_url_fun(long_url: str):
+        """
+        Function to generate tiny url
+        """ 
+        #generate the url 
+        #store in the database 
+
+        return tiny_url
+
+
+
+Input -- 
+    url only as str 
+
+
+output -- 
+    tiny url as str 
+
+
+
+
+
+    
