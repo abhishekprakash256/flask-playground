@@ -66,9 +66,6 @@ Flask server --
       """
       The function will redirect the tiny url to the main url 
       """
-    
-    
-
 
 
 

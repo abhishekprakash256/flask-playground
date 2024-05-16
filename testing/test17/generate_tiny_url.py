@@ -64,3 +64,4 @@ def generate_tiny_url_fun(original_url):
 #helper_fun.delete_db(SET_NAME)
 #helper_fun.get_all_hash_val()
 #helper_fun.get_all_set_val()
+#print(type(helper_fun.get_hash_value("X7Wb4")))
