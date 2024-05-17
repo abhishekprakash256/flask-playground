@@ -56,8 +56,9 @@ front -end --
     - output field to copy the url 
 
     - api 
-        inp (orginal_url)
-        out (tiny_url)
+        submit_tiny_url  (end point) (orginal_url)
+        out (new_hash)
+
 
 
 Flask server -- 
@@ -66,29 +67,10 @@ Flask server --
       """
       The function will redirect the tiny url to the main url 
       """
-
-
-
-reqs -- 
-    redis connection maker
-    hashing generation functionlity
-    redis sets pushing the values 
-        - checking doens't exist in the redis hashes as well for keys 
-    generate the value and store in redis hashes and give out 
-    
-    
-
-
-API reqs -- 
-
-    generate_tiny_url_fun(long_url: str):
-        """
-        Function to generate tiny url
-        """ 
-        #generate the url 
-        #store in the database 
-
-        return tiny_url
+    - tiny_url_render ()
+      """
+      render the tiny url generatar page 
+      """
 
 
 
@@ -100,6 +82,15 @@ output --
     tiny url as str 
 
 
+Reqs - 
+
+    - render the hash from front-end 
+      https://www.meabhi.me/tu/BuIvwW4  -- like this 
+    - get new hash and render it in front-end 
+    - with QR code 
+    - and copy function 
+    - give a option to generate new after that
+    
 
 
 

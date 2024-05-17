@@ -169,9 +169,6 @@ def tiny_url_redirect(tiny_url):
 @app.route('/demo/tiny-url')
 def tiny_url_render():
 
-    #make a hash map for the data if more project are given to render the files
-
-    #page_data = {"articles_json": articles_json}
 
     return render_template('demo/tiny-url/tiny_url.html')
 
