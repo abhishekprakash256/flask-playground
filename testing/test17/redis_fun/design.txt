@@ -92,6 +92,7 @@ Reqs -
     - give a option to generate new after that
     - make redis to mongo data copy system
     - and back and forth to save data in time to crissis
+    - check the error from section data in console 
 
 
 
