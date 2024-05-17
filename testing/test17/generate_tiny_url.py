@@ -48,7 +48,9 @@ def generate_tiny_url_fun(original_url):
     
     check_redis_set()
     new_url = helper_fun.pop_set_val()
-    
+
+    #test purpose
+    print(new_url)
 
     #add the url in the redis with new hash value
     helper_fun.add_value_to_hash(new_url, original_url)

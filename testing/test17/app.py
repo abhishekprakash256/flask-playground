@@ -50,7 +50,7 @@ def section(section_name):
 
     page_data = get_article_data(db_name[1],collections[3],{'section_name': section_name})
 
-    print(page_data)
+    #print(page_data)
 
     return render_template('section.html',**page_data)
 
@@ -145,25 +145,27 @@ def submit_tiny_url():
     # Retrieve form data
     original_url = request.form.get('original_url')
 
-    print(original_url)
+    print(type(original_url))
+
+    #generate the tiny url and get the hash, put in redis 
+    generate_tiny_url_fun(original_url)
 
     return original_url
 
 
-
-
-#the function to redirect to the original url given 
+#the function to redirect to the original url given using the https:// pasted
 @app.route("/tu/<tiny_url>")
 def tiny_url_redirect(tiny_url):
 
     #fetch the original value from redis
     original_url = helper_fun.get_hash_value(tiny_url)
-    
-    return redirect("https://" + original_url)
+
+    #return redirect("https://" + original_url)
+    return redirect(original_url)
 
 
 
-#render the tiny url demo 
+#render the tiny url demo page
 @app.route('/demo/tiny-url')
 def tiny_url_render():
 
