@@ -140,8 +140,19 @@ def submit_form():
 
 
 
-#the test case , the pieces are working correctly 
-#make the front end and add the value to backend 
+@app.route('/submit_tiny_url', methods=['POST'])
+def submit_tiny_url():
+    # Retrieve form data
+    original_url = request.form.get('original_url')
+
+    print(original_url)
+
+    return original_url
+
+
+
+
+#the function to redirect to the original url given 
 @app.route("/tu/<tiny_url>")
 def tiny_url_redirect(tiny_url):
 

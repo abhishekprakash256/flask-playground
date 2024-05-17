@@ -1,4 +1,31 @@
-
+<style>
+    .submit-success-message {
+      color: #557C55;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .submit-error-message {
+      color:#FA7070;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  
+    /* Custom button color */
+    .button-custom-color {
+      background-color: #19A7CE;
+      border-color: #19A7CE;
+      color:#ffffff
+    }
+  
+    .button-custom-color:hover {
+      background-color: #0D87B0;
+      border-color: #0D87B0;
+      color: #fefefe; /* Font color on hover */
+    }
+  </style>
 
 <!--------------------make the input--------------------->
 
@@ -6,17 +33,60 @@
 <div class="row footer-header-color flex-column flex-md-row">
     <div class="col"></div>
     <div class="col text-center"> <!-- Add text-center class here -->
-      <form id="contactForm">
+      <form id="tinyurlForm">
         <div class="form-group">
-          <label for="name"></label>
+          <label ></label>
           <input type="text" class="form-control" name="original_url" id="original_url" placeholder="Enter the original url">
         </div>
-        <div id="successMessageSubmit" class="submit-success-message" style="display: none;">Message sent successfully!</div>
-        <div id="errorMessage" class="submit-error-message bio-font" style="display: none;">Please fill the url</div>
+        <div id="successMessageSubmittinyurl" class="submit-success-message" style="display: none;">Url submitted</div>
+        <div id="errorMessagetinyurl" class="submit-error-message bio-font" style="display: none;">Please fill the url</div>
         <button type="submit" class="btn button-custom-color bio-font" id="get_tiny_url">Get Tiny Url</button>
         
       </form>
-      <label for="name"></label>
+      <label ></label>
     </div>
     <div class="col"></div>
   </div>
+
+
+  <!-- Custom JavaScript -->
+<script>
+    document.getElementById("tinyurlForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      
+      // Check if any field is empty
+      var orginal_url = document.getElementById("original_url").value;
+
+  
+      if (orginal_url === "") {
+        // Display error message
+        document.getElementById("errorMessagetinyurl").style.display = "block";
+        return; // Exit the function if any field is empty
+      }
+  
+      // Send the form data to the Flask backend using AJAX
+      var formData = new FormData(this);
+      fetch('/submit_tiny_url', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        if (data.success) {
+          // Display success message
+          document.getElementById("successMessageSubmittinyurl").style.display = "block";
+          // Clear form fields
+          document.getElementById("original_url").value = "";
+ 
+        } else {
+          // Display error message
+          document.getElementById("errorMessagetinyurl").style.display = "block";
+        }
+      })
+      .catch(error => {
+        // Handle error if needed
+        console.error('Error:', error);
+      });
+    });
+  </script>
