@@ -45,8 +45,6 @@ def about():
 
 
 
-
-
 @app.route('/<section_name>')
 def section(section_name):
 
@@ -55,6 +53,7 @@ def section(section_name):
     print(page_data)
 
     return render_template('section.html',**page_data)
+
 
 
 @app.route('/projects/<article_name>')
@@ -76,7 +75,7 @@ def project_demo(project_name):
     demo_data = {
         'project_urls': {
             'academic-website': "projects/Academic-Website/index.html",
-            'another-project': "projects/Another-Project/index.html",
+            'tiny-url': "demo/tiny-url/tiny_url.html",
             # Add more projects and their URLs as needed
         }
     }
@@ -141,8 +140,6 @@ def submit_form():
 
 
 
-
-
 #the test case , the pieces are working correctly 
 #make the front end and add the value to backend 
 @app.route("/tu/<tiny_url>")
@@ -151,8 +148,23 @@ def tiny_url_redirect(tiny_url):
     #fetch the original value from redis
     original_url = helper_fun.get_hash_value(tiny_url)
     
-
     return redirect("https://" + original_url)
+
+
+
+#render the tiny url demo 
+@app.route('/demo/tiny-url')
+def tiny_url_render():
+
+    #make a hash map for the data if more project are given to render the files
+
+    #page_data = {"articles_json": articles_json}
+
+    return render_template('demo/tiny-url/tiny_url.html')
+
+
+
+
 
 
 
