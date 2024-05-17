@@ -40,6 +40,7 @@
         </div>
         <div id="successMessageSubmittinyurl" class="submit-success-message" style="display: none;">Url submitted</div>
         <div id="errorMessagetinyurl" class="submit-error-message bio-font" style="display: none;">Please fill the url</div>
+        <div id="tinyUrlDisplay" style="display: none;"></div>
         <button type="submit" class="btn button-custom-color bio-font" id="get_tiny_url">Get Tiny Url</button>
         
       </form>
@@ -50,20 +51,19 @@
 
 
   <!-- Custom JavaScript -->
-<script>
+  <script>
     document.getElementById("tinyurlForm").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent the default form submission behavior
-      
+    
       // Check if any field is empty
-      var orginal_url = document.getElementById("original_url").value;
-
-  
-      if (orginal_url === "") {
+      var original_url = document.getElementById("original_url").value;
+    
+      if (original_url === "") {
         // Display error message
         document.getElementById("errorMessagetinyurl").style.display = "block";
         return; // Exit the function if any field is empty
       }
-  
+    
       // Send the form data to the Flask backend using AJAX
       var formData = new FormData(this);
       fetch('/submit_tiny_url', {
@@ -78,7 +78,12 @@
           document.getElementById("successMessageSubmittinyurl").style.display = "block";
           // Clear form fields
           document.getElementById("original_url").value = "";
- 
+          
+          // Display the generated tiny URL
+          var tinyUrlDisplay = document.getElementById("tinyUrlDisplay");
+          tinyUrlDisplay.style.display = "block";
+          tinyUrlDisplay.textContent = "Your tiny URL: " + window.location.origin + "/tu/" + data.tiny_url;
+    
         } else {
           // Display error message
           document.getElementById("errorMessagetinyurl").style.display = "block";
@@ -89,4 +94,5 @@
         console.error('Error:', error);
       });
     });
-  </script>
+    </script>
+    

@@ -145,22 +145,24 @@ def submit_tiny_url():
     # Retrieve form data
     original_url = request.form.get('original_url')
 
-    print(type(original_url))
+    #print(original_url)
 
-    #generate the tiny url and get the hash, put in redis 
-    generate_tiny_url_fun(original_url)
+    # Generate the tiny URL and get the hash, put in Redis 
+    tiny_url = generate_tiny_url_fun(original_url)
 
-    return original_url
+    # Return the tiny URL hash
+    return jsonify({'success': True, 'tiny_url': tiny_url})
 
 
 #the function to redirect to the original url given using the https:// pasted
 @app.route("/tu/<tiny_url>")
 def tiny_url_redirect(tiny_url):
 
-    #fetch the original value from redis
+    # Fetch the original value from Redis
     original_url = helper_fun.get_hash_value(tiny_url)
-
-    #return redirect("https://" + original_url)
+    
+    #print(original_url)
+    
     return redirect(original_url)
 
 
