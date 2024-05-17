@@ -41,7 +41,8 @@
         <div id="successMessageSubmittinyurl" class="submit-success-message" style="display: none;">Url submitted</div>
         <div id="errorMessagetinyurl" class="submit-error-message bio-font" style="display: none;">Please fill the url</div>
         <div id="tinyUrlDisplay" style="display: none;"></div>
-        <button type="submit" class="btn button-custom-color bio-font" id="get_tiny_url">Get Tiny Url</button>
+        <button type="submit" class="btn button-custom-color bio-font" id="get_tiny_url" >Get Tiny Url</button>
+        <button type="button" class="btn button-custom-color bio-font" id="clearButton" style="display: none;">Clear</button> <!-- Clear button -->
         
       </form>
       <label ></label>
@@ -55,13 +56,16 @@
     document.getElementById("tinyurlForm").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent the default form submission behavior
     
-      // Check if any field is empty
+      // Check if the URL field is empty
       var original_url = document.getElementById("original_url").value;
     
       if (original_url === "") {
         // Display error message
         document.getElementById("errorMessagetinyurl").style.display = "block";
-        return; // Exit the function if any field is empty
+        return; // Exit the function if the field is empty
+      } else {
+        // Hide error message if URL is not empty
+        document.getElementById("errorMessagetinyurl").style.display = "none";
       }
     
       // Send the form data to the Flask backend using AJAX
@@ -78,11 +82,15 @@
           document.getElementById("successMessageSubmittinyurl").style.display = "block";
           // Clear form fields
           document.getElementById("original_url").value = "";
-          
+    
           // Display the generated tiny URL
           var tinyUrlDisplay = document.getElementById("tinyUrlDisplay");
           tinyUrlDisplay.style.display = "block";
           tinyUrlDisplay.textContent = "Your tiny URL: " + window.location.origin + "/tu/" + data.tiny_url;
+    
+          // Show the Clear button and hide the Generate button
+          document.getElementById("clearButton").style.display = "inline";
+          document.getElementById("generateButton").style.display = "none";
     
         } else {
           // Display error message
@@ -92,7 +100,22 @@
       .catch(error => {
         // Handle error if needed
         console.error('Error:', error);
+        document.getElementById("errorMessagetinyurl").style.display = "block";
       });
+    });
+    
+    // Clear button functionality
+    document.getElementById("clearButton").addEventListener("click", function() {
+      // Clear form fields
+      document.getElementById("original_url").value = "";
+      // Hide messages
+      document.getElementById("errorMessagetinyurl").style.display = "none";
+      document.getElementById("successMessageSubmittinyurl").style.display = "none";
+      document.getElementById("tinyUrlDisplay").style.display = "none";
+    
+      // Hide the Clear button and show the Generate button
+      document.getElementById("clearButton").style.display = "none";
+      document.getElementById("generateButton").style.display = "inline";
     });
     </script>
     
