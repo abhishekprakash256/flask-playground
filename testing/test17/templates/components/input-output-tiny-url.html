@@ -32,8 +32,11 @@
         #qrcode {
             margin-top: 20px;
         }
-    </style>
 
+        .button-container {
+            margin-top: 20px; /* Space between buttons */
+        }
+    </style>
 
     <div class="row footer-header-color flex-column flex-md-row">
         <div class="col"></div>
@@ -43,11 +46,16 @@
                     <label></label>
                     <input type="text" class="form-control" name="original_url" id="original_url" placeholder="Enter the original URL with http">
                 </div>
-                <div id="successMessageSubmittinyurl" class="submit-success-message" style="display: none;">URL submitted</div>
+                <div id="successMessageSubmittinyurl" class="submit-success-message" style="display: none;">URL Generated Succesfully!!</div>
                 <div id="errorMessagetinyurl" class="submit-error-message bio-font" style="display: none;">Please fill the URL</div>
-                <div id="tinyUrlDisplay" style="display: none;"></div>
-                <button type="submit" class="btn button-custom-color bio-font" id="get_tiny_url">Get Tiny URL</button>
-                <button type="button" class="btn button-custom-color bio-font" id="clearButton" style="display: none;">Generate Another URL</button>
+                <div id="tinyUrlDisplayContainer" style="display: none;">
+                    <div class ="arial-font font-color-class" id="tinyUrlDisplay"></div>
+                    <button type="button" id="copyButton" class="btn button-custom-color bio-font">Copy Tiny URL</button>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="btn button-custom-color bio-font" id="get_tiny_url">Get Tiny URL</button>
+                    <button type="button" class="btn button-custom-color bio-font" id="clearButton" style="display: none;">Generate Another URL</button>
+                </div>
             </form>
             <div id="qrcode"></div>
         </div>
@@ -88,8 +96,9 @@
                     document.getElementById("original_url").value = "";
             
                     // Display the generated tiny URL
+                    var tinyUrlDisplayContainer = document.getElementById("tinyUrlDisplayContainer");
                     var tinyUrlDisplay = document.getElementById("tinyUrlDisplay");
-                    tinyUrlDisplay.style.display = "block";
+                    tinyUrlDisplayContainer.style.display = "block";
                     tinyUrlDisplay.textContent = window.location.origin + "/tu/" + data.tiny_url;
             
                     // Show the Clear button, hide the Generate button
@@ -127,4 +136,32 @@
             qr.clear(); // Clear the previous QR code
             qr.makeCode(url); // Generate QR code for the tiny URL
         }
+
+        // Select the copy button
+        const copyButton = document.getElementById("copyButton");
+
+        // Add click event listener to the copy button
+        copyButton.addEventListener("click", function() {
+            // Select the tiny URL text
+            const tinyUrlText = document.getElementById("tinyUrlDisplay").textContent;
+
+            // Create a temporary textarea element to copy the text
+            const textarea = document.createElement("textarea");
+            textarea.value = tinyUrlText;
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            // Copy the text to the clipboard
+            document.execCommand("copy");
+
+            // Remove the temporary textarea
+            document.body.removeChild(textarea);
+
+            // Provide visual feedback that the URL has been copied
+            copyButton.textContent = "Copied!";
+            setTimeout(function() {
+                copyButton.textContent = "Copy Tiny URL";
+            }, 2000); // Change back to "Copy Tiny URL" after 2 seconds
+        });
     </script>
+
