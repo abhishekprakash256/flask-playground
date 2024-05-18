@@ -1,6 +1,4 @@
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
     <style>
         .submit-success-message {
@@ -36,6 +34,16 @@
         .button-container {
             margin-top: 20px; /* Space between buttons */
         }
+
+        .qr-code {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tiny-url{
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
     </style>
 
     <div class="row footer-header-color flex-column flex-md-row">
@@ -49,15 +57,16 @@
                 <div id="successMessageSubmittinyurl" class="submit-success-message" style="display: none;">URL Generated Succesfully!!</div>
                 <div id="errorMessagetinyurl" class="submit-error-message bio-font" style="display: none;">Please fill the URL</div>
                 <div id="tinyUrlDisplayContainer" style="display: none;">
-                    <div class ="arial-font font-color-class" id="tinyUrlDisplay"></div>
+                    <div class ="tiny-url arial-font font-color-class " id="tinyUrlDisplay"></div>
                     <button type="button" id="copyButton" class="btn button-custom-color bio-font">Copy Tiny URL</button>
                 </div>
                 <div class="button-container">
                     <button type="submit" class="btn button-custom-color bio-font" id="get_tiny_url">Get Tiny URL</button>
                     <button type="button" class="btn button-custom-color bio-font" id="clearButton" style="display: none;">Generate Another URL</button>
                 </div>
+                <div class = "qr-code" id="qrcode"></div>
             </form>
-            <div id="qrcode"></div>
+            
         </div>
         <div class="col"></div>
     </div>
