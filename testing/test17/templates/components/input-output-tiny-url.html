@@ -1,0 +1,139 @@
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        .submit-success-message {
+            color: #557C55;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .submit-error-message {
+            color: #FA7070;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .button-custom-color {
+            background-color: #19A7CE;
+            border-color: #19A7CE;
+            color: #ffffff;
+        }
+
+        .button-custom-color:hover {
+            background-color: #0D87B0;
+            border-color: #0D87B0;
+            color: #fefefe;
+        }
+
+        #qrcode {
+            margin-top: 20px;
+        }
+    </style>
+    <div class="row footer-header-color flex-column flex-md-row">
+        <div class="col"></div>
+        <div class="col text-center">
+            <form id="tinyurlForm">
+                <div class="form-group">
+                    <label></label>
+                    <input type="text" class="form-control" name="original_url" id="original_url" placeholder="Enter the original URL with http">
+                </div>
+                <div id="successMessageSubmittinyurl" class="submit-success-message" style="display: none;">URL submitted</div>
+                <div id="errorMessagetinyurl" class="submit-error-message bio-font" style="display: none;">Please fill the URL</div>
+                <div id="tinyUrlDisplay" style="display: none;"></div>
+                <button type="submit" class="btn button-custom-color bio-font" id="get_tiny_url">Get Tiny URL</button>
+                <button type="button" class="btn button-custom-color bio-font" id="clearButton" style="display: none;">Clear</button>
+                <button type="button" class="btn button-custom-color bio-font" id="generateQRCodeButton" style="display: none;">Generate QR Code</button>
+            </form>
+            <div id="qrcode"></div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <!-- Load QRCode library from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        document.getElementById("tinyurlForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+        
+            // Check if the URL field is empty
+            var original_url = document.getElementById("original_url").value;
+        
+            if (original_url === "") {
+                // Display error message
+                document.getElementById("errorMessagetinyurl").style.display = "block";
+                return; // Exit the function if the field is empty
+            } else {
+                // Hide error message if URL is not empty
+                document.getElementById("errorMessagetinyurl").style.display = "none";
+            }
+        
+            // Send the form data to the Flask backend using AJAX
+            var formData = new FormData(this);
+            fetch('/submit_tiny_url', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Display success message
+                    document.getElementById("successMessageSubmittinyurl").style.display = "block";
+                    // Clear form fields
+                    document.getElementById("original_url").value = "";
+            
+                    // Display the generated tiny URL
+                    var tinyUrlDisplay = document.getElementById("tinyUrlDisplay");
+                    tinyUrlDisplay.style.display = "block";
+                    tinyUrlDisplay.textContent = window.location.origin + "/tu/" + data.tiny_url;
+            
+                    // Show the Clear button and QR Code button, hide the Generate button
+                    document.getElementById("clearButton").style.display = "inline";
+                    document.getElementById("generateQRCodeButton").style.display = "inline";
+                    document.getElementById("get_tiny_url").style.display = "none";
+                } else {
+                    // Display error message
+                    document.getElementById("errorMessagetinyurl").style.display = "block";
+                }
+            })
+            .catch(error => {
+                // Handle error if needed
+                console.error('Error:', error);
+                document.getElementById("errorMessagetinyurl").style.display = "block";
+            });
+        });
+
+        // Clear button functionality
+        document.getElementById("clearButton").addEventListener("click", function() {
+            // Clear form fields
+            document.getElementById("original_url").value = "";
+            // Hide messages and QR code
+            document.getElementById("errorMessagetinyurl").style.display = "none";
+            document.getElementById("successMessageSubmittinyurl").style.display = "none";
+            document.getElementById("tinyUrlDisplay").style.display = "none";
+            document.getElementById("qrcode").innerHTML = "";
+        
+            // Hide the Clear button and QR Code button, show the Generate button
+            document.getElementById("clearButton").style.display = "none";
+            document.getElementById("generateQRCodeButton").style.display = "none";
+            document.getElementById("get_tiny_url").style.display = "inline";
+        });
+
+        const qrcodeElement = document.getElementById("qrcode");
+        const qr = new QRCode(qrcodeElement, {
+            width: 200,
+            height: 200
+        });
+
+        // QR Code button functionality
+        document.getElementById("generateQRCodeButton").addEventListener("click", function() {
+            var tinyUrl = document.getElementById("tinyUrlDisplay").textContent;
+            qr.clear(); // Clear the previous QR code
+            qr.makeCode(tinyUrl); // Generate QR code for the tiny URL
+        });
+    </script>
+
