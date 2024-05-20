@@ -48,15 +48,15 @@ kill_flask_process = subprocess.run(['kill', flask_pid], capture_output=True, te
 
 #injets the dataset for mongo db 
 
-os.chdir('mongo')
-
-injest_data = subprocess.run(['python3', 'bulk_data_insertion.py'], shell=True, capture_output=True, text=True, check=True)
+injest_data = subprocess.run(['cd mongo && python3 bulk_data_insertion.py'], shell=True, capture_output=True, text=True, check=True)
 
 print(injest_data.stdout)
 
-#run the flask server again 
 
+#change the dir again
 os.chdir(original_directory)
+
+#run the flask server again 
 
 run_server = subprocess.run('flask run --host=0.0.0.0 --port=5000 > output.log 2>&1 & disown', shell=True, capture_output=True, text=True, check=True)
 
