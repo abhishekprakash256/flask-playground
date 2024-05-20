@@ -61,7 +61,7 @@ os.chdir(original_directory)
 
 run_server = subprocess.run('nohup flask run --host=0.0.0.0 --port=5000 > output.log 2>&1 &', shell=True, check=True)
 if run_server:
-    print("server ran succesfully")
+    print("Flask started succesfully")
 
 else:
-    print("failed to ran server")
+    print("Failed to start server")
