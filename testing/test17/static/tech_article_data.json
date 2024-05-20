@@ -24,15 +24,20 @@
             
     
         ],
-        "card_one_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_one": "..\\static\\images\\misc\\cards.jpg",
-        "card_first_url": "#",
+
+        "card_one_text": "Image processing is a technique used by machines to understand data in a flat block of arrays, which can range from multi-dimensional arrays to few-dimensional arrays.",
+        "image_url_card_one": "..\\static\\images\\tech\\image-processing.jpg",
+        "card_one_url": "/tech/image-processing",
     
-        "card_two_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_two": "..\\static\\images\\misc\\cards.jpg",
+        "card_two_text": "Dynamic programming is a programming paradigm that can be used in problems which can be subdivided into smaller problems to get to the final solution. These sound like recursion but the difference comes in the storage of the values in each of the stages",
+        "image_url_card_two": "..\\static\\images\\tech\\dynamic-programming.jpg",
+        "card_two_url": "/tech/dynamic-programming",
     
-        "card_three_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_three": "..\\static\\images\\misc\\cards.jpg",
+        "card_three_text": "Static Academic website made to showcase the profile and works, made using HTML, CSS, Media Query (for the responsive optimization for mobile, tablet and different size devices). The website is consist of 8 pages that shows the",
+        "image_url_card_three": "..\\static\\images\\projects\\academic-website\\main_page.png",
+        "card_three_url": "/projects/academic-website",
+
+
         "first_social_media_url" : "",
         
         "second_social_media_url" : "",
@@ -54,15 +59,20 @@
                 
     
         ],
-        "card_one_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_one": "..\\static\\images\\misc\\cards.jpg",
-        "card_first_url": "#",
+
+        "card_one_text": "Image processing is a technique used by machines to understand data in a flat block of arrays, which can range from multi-dimensional arrays to few-dimensional arrays.",
+        "image_url_card_one": "..\\static\\images\\tech\\image-processing.jpg",
+        "card_one_url": "/tech/image-processing",
     
-        "card_two_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_two": "..\\static\\images\\misc\\cards.jpg",
+        "card_two_text": "As I embarked on the journey of mastering system design to excel in technical job interviews, I found myself immersed in the rich landscape of distributed systems. Combining resources from platforms like educative.io and literature such as ",
+        "image_url_card_two": "..\\static\\images\\tech\\system-design.png",
+        "card_two_url": "/tech/system-design",
     
-        "card_three_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_three": "..\\static\\images\\misc\\cards.jpg",
+        "card_three_text": "Static Academic website made to showcase the profile and works, made using HTML, CSS, Media Query (for the responsive optimization for mobile, tablet and different size devices). The website is consist of 8 pages that shows the",
+        "image_url_card_three": "..\\static\\images\\projects\\academic-website\\main_page.png",
+        "card_three_url": "/projects/academic-website",
+
+
         "first_social_media_url" : "",
         
         "second_social_media_url" : "",
@@ -83,15 +93,21 @@
             
     
         ],
-        "card_one_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_one": "..\\static\\images\\misc\\cards.jpg",
-        "card_first_url": "#",
+
+        "card_one_text": "As I embarked on the journey of mastering system design to excel in technical job interviews, I found myself immersed in the rich landscape of distributed systems. Combining resources from platforms like educative.io and literature such as ",
+        "image_url_card_one": "..\\static\\images\\tech\\system-design.png",
+        "card_one_url": "/tech/system-design",
     
-        "card_two_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_two": "..\\static\\images\\misc\\cards.jpg",
+        "card_two_text": "Dynamic programming is a programming paradigm that can be used in problems which can be subdivided into smaller problems to get to the final solution. These sound like recursion but the difference comes in the storage of the values in each of the stages",
+        "image_url_card_two": "..\\static\\images\\tech\\dynamic-programming.jpg",
+        "card_two_url": "/tech/dynamic-programming",
     
-        "card_three_text": "Some quick example text to build on the card title and make up the bulk of the card's content",
-        "image_url_card_three": "..\\static\\images\\misc\\cards.jpg",
+        "card_three_text": "Static Academic website made to showcase the profile and works, made using HTML, CSS, Media Query (for the responsive optimization for mobile, tablet and different size devices). The website is consist of 8 pages that shows the",
+        "image_url_card_three": "..\\static\\images\\projects\\academic-website\\main_page.png",
+        "card_three_url": "/projects/academic-website",
+
+
+
         "first_social_media_url" : "",
         
         "second_social_media_url" : "",

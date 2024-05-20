@@ -20,9 +20,10 @@
             
     
         ],
+
         "card_one_text": "The Tiny-URL Generator is a URL shortening service developed as a web application using the Flask framework. This project aims to simplify the process of sharing long URLs by generating shorter",
         "image_url_card_one": "..\\static\\images\\projects\\tiny-url\\www.png",
-        "card_first_url": "/projects/tiny-url",
+        "card_one_url": "/projects/tiny-url",
     
         "card_two_text": "Federated Learning is a decentralized learning paradigm where models are trained on various devices, and their parameters are combined to create a global model. Initially introduced by Google",
         "image_url_card_two": "..\\static\\images\\projects\\federated-learning\\federated-learning-flow.png",
@@ -62,7 +63,7 @@
             ],
             "card_one_text": "Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches",
             "image_url_card_one": "..\\static\\images\\projects\\patching-unpatching\\patching.png",
-            "card_first_url": "/projects/patching-unpatching",
+            "card_one_url": "/projects/patching-unpatching",
         
             "card_two_text": "Federated Learning is a decentralized learning paradigm where models are trained on various devices, and their parameters are combined to create a global model. Initially introduced by Google",
             "image_url_card_two": "..\\static\\images\\projects\\federated-learning\\federated-learning-flow.png",
@@ -102,7 +103,7 @@
 
             "card_one_text": "Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches",
             "image_url_card_one": "..\\static\\images\\projects\\patching-unpatching\\patching.png",
-            "card_first_url": "/projects/patching-unpatching",
+            "card_one_url": "/projects/patching-unpatching",
         
             "card_two_text": "The Tiny-URL Generator is a URL shortening service developed as a web application using the Flask framework. This project aims to simplify the process of sharing long URLs by generating shorter",
             "image_url_card_two": "..\\static\\images\\projects\\tiny-url\\www.png",
@@ -147,7 +148,7 @@
     
             "card_one_text": "Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches",
             "image_url_card_one": "..\\static\\images\\projects\\patching-unpatching\\patching.png",
-            "card_first_url": "/projects/patching-unpatching",
+            "card_one_url": "/projects/patching-unpatching",
         
             "card_two_text": "The Tiny-URL Generator is a URL shortening service developed as a web application using the Flask framework. This project aims to simplify the process of sharing long URLs by generating shorter",
             "image_url_card_two": "..\\static\\images\\projects\\tiny-url\\www.png",
@@ -196,7 +197,7 @@
     
             "card_one_text": "Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches",
             "image_url_card_one": "..\\static\\images\\projects\\patching-unpatching\\patching.png",
-            "card_first_url": "/projects/patching-unpatching",
+            "card_one_url": "/projects/patching-unpatching",
         
             "card_two_text": "The Tiny-URL Generator is a URL shortening service developed as a web application using the Flask framework. This project aims to simplify the process of sharing long URLs by generating shorter",
             "image_url_card_two": "..\\static\\images\\projects\\tiny-url\\www.png",
