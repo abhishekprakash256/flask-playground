@@ -1,0 +1,22 @@
+# robots.txt
+
+# Allow all web crawlers full access to the main site
+User-agent: *
+Disallow:
+
+# Disallow web crawlers from accessing sensitive directories
+Disallow: /admin/
+Disallow: /user/
+Disallow: /settings/
+Disallow: /api/
+
+# Disallow web crawlers from accessing specific files
+Disallow: /secret-settings.html
+Disallow: /private-data.csv
+
+# Allow specific search engines to access a specific folder
+User-agent: Googlebot
+Allow: /public/
+
+# Sitemap location
+Sitemap: https://www.meabhi.me/sitemap.xml
