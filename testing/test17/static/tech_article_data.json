@@ -25,6 +25,7 @@
     
         ],
 
+        "more_title": "More Tech",
         "card_one_text": "Image processing is a technique used by machines to understand data in a flat block of arrays, which can range from multi-dimensional arrays to few-dimensional arrays.",
         "image_url_card_one": "..\\static\\images\\tech\\image-processing.jpg",
         "card_one_url": "/tech/image-processing",
@@ -60,6 +61,7 @@
     
         ],
 
+        "more_title": "More Tech",
         "card_one_text": "Image processing is a technique used by machines to understand data in a flat block of arrays, which can range from multi-dimensional arrays to few-dimensional arrays.",
         "image_url_card_one": "..\\static\\images\\tech\\image-processing.jpg",
         "card_one_url": "/tech/image-processing",
@@ -94,6 +96,7 @@
     
         ],
 
+        "more_title": "More Tech",
         "card_one_text": "As I embarked on the journey of mastering system design to excel in technical job interviews, I found myself immersed in the rich landscape of distributed systems. Combining resources from platforms like educative.io and literature such as ",
         "image_url_card_one": "..\\static\\images\\tech\\system-design.png",
         "card_one_url": "/tech/system-design",

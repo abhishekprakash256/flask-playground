@@ -31,6 +31,9 @@
         {% endfor %}
 
 
+
+
+
         {% set first_social_media_url = articles_json['first_social_media_url'] %}
         {% set second_social_media_url = articles_json['second_social_media_url'] %}
         {% set third_social_media_url = articles_json['third_social_media_url'] %}
@@ -46,6 +49,11 @@
         {% include 'reusable/demo-button.html' %}
         {% endif %}
 
+
+        {% set title = articles_json['more_title']%}
+        {% if title %}
+        {% include 'reusable/card-heading.html'%}
+        {% endif %}
 
         {% set card_one_text= articles_json['card_one_text'] %}
         {% set image_url_card_one= articles_json['image_url_card_one'] %}
@@ -65,6 +73,9 @@
         <!--------------------The end of one card  ---------------->
         {% set more_link = articles_json.more_link %}
         {% include 'reusable/more.html' %}
+    
+    
+
 
     </div>
 </body>

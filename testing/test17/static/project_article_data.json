@@ -21,6 +21,8 @@
     
         ],
 
+        "more_title": "More Projects",
+
         "card_one_text": "The Tiny-URL Generator is a URL shortening service developed as a web application using the Flask framework. This project aims to simplify the process of sharing long URLs by generating shorter",
         "image_url_card_one": "..\\static\\images\\projects\\tiny-url\\www.png",
         "card_one_url": "/projects/tiny-url",
@@ -61,6 +63,8 @@
                 
         
             ],
+
+            "more_title": "More Projects",
             "card_one_text": "Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches",
             "image_url_card_one": "..\\static\\images\\projects\\patching-unpatching\\patching.png",
             "card_one_url": "/projects/patching-unpatching",
@@ -101,6 +105,7 @@
     
             ],
 
+            "more_title": "More Projects",
             "card_one_text": "Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches",
             "image_url_card_one": "..\\static\\images\\projects\\patching-unpatching\\patching.png",
             "card_one_url": "/projects/patching-unpatching",
@@ -145,7 +150,8 @@
     
     
             ],
-    
+            
+            "more_title": "More Projects",
             "card_one_text": "Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches",
             "image_url_card_one": "..\\static\\images\\projects\\patching-unpatching\\patching.png",
             "card_one_url": "/projects/patching-unpatching",
@@ -194,7 +200,8 @@
     
     
             ],
-    
+            
+            "more_title": "More Projects",
             "card_one_text": "Patching and Unpatching are a set of tools that are used for image processing. The patching tool is used to cut small square sections of the input image known as patches",
             "image_url_card_one": "..\\static\\images\\projects\\patching-unpatching\\patching.png",
             "card_one_url": "/projects/patching-unpatching",
