@@ -46,9 +46,13 @@
         }
     </style>
 
-    <div class="row footer-header-color flex-column flex-md-row">
-        <div class="col"></div>
-        <div class="col text-center">
+    <div class="row p-3 flex-column flex-md-row ">
+
+      <div class="col rounded">
+
+        <div class="row background-color-body rounded" >
+        <div class="col "></div>
+        <div class="col text-center ">
             <form id="tinyurlForm">
                 <div class="form-group">
                     <label></label>
@@ -60,7 +64,7 @@
                     <div class ="tiny-url arial-font font-color-class " id="tinyUrlDisplay"></div>
                     <button type="button" id="copyButton" class="btn button-custom-color bio-font">Copy Tiny URL</button>
                 </div>
-                <div class="button-container">
+                <div class="button-container mb-2">
                     <button type="submit" class="btn button-custom-color bio-font" id="get_tiny_url">Get Tiny URL</button>
                     <button type="button" class="btn button-custom-color bio-font" id="clearButton" style="display: none;">Generate Another URL</button>
                 </div>
@@ -69,15 +73,25 @@
             
         </div>
         <div class="col"></div>
+
+        </div>
     </div>
-    <div class="row footer-header-color text-center">
-
-        <div class = "col"></div>
-
-        <div class = "qr-code" id="qrcode"></div>
-
-        <div class = "col"></div>
     </div>
+    
+    <div id = "qrcontainer" class="row p-3 flex-column flex-md-row " style="display: none;">
+      <div class="col rounded">
+    <div class="row background-color-body rounded text-center">
+
+      <div class = "col"></div>
+
+      <div class = "qr-code" id="qrcode"></div>
+
+      <div class = "col"></div>
+      </div>
+  </div>
+  </div>
+
+
 
     <!-- Load QRCode library from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -114,8 +128,10 @@
             
                     // Display the generated tiny URL
                     var tinyUrlDisplayContainer = document.getElementById("tinyUrlDisplayContainer");
+                    var qrcontainer = document.getElementById("qrcontainer");
                     var tinyUrlDisplay = document.getElementById("tinyUrlDisplay");
                     tinyUrlDisplayContainer.style.display = "block";
+                    qrcontainer.style.display = "block";
                     tinyUrlDisplay.textContent = window.location.origin + "/tu/" + data.tiny_url;
             
                     // Show the Clear button, hide the Generate button
